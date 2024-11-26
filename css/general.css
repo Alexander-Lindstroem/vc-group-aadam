@@ -5,8 +5,8 @@
     --button-color: rgb(0, 135, 103);
     --button-optional-color: rgb(251, 255, 54);
     --button-secondary-color: rgb(216, 216, 216);
-    --text-main-color: black; 
-    --text-secondary-color: white;   
+    --text-main-color: rgb(0, 0, 0); 
+    --text-secondary-color: rgb(255, 255, 255);   
 }
 
 * {
