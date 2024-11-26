@@ -22,6 +22,10 @@
 .iconhamburger {
     margin-top: 10px;
     color: white;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    
 }
 
 
@@ -123,5 +127,5 @@
 }
 
 .sidebar ul {
-    margin-top: 90px; /* Flyttar hela listan neråt */
+    margin-top: 90px;
 }
