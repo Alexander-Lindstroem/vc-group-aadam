@@ -19,6 +19,11 @@
     left: 40px
 }
 
+.iconhamburger {
+    margin-top: 10px;
+    color: white;
+}
+
 
 .sidebar {
     position: absolute;
@@ -26,7 +31,7 @@
     left: 0;
     height: 100vh;
     width: 80px;
-    background-color: #12171e;
+    background-color: rgba(0, 0, 0, 0.822);
     padding: .4rem .8rem;
     transition: all 0.5s ease;
 }
@@ -42,7 +47,6 @@
 
 .sidebar #btn {
     position: absolute;
-    color: white;
     top: .4rem;
     left: 50%;
     font-size: 1.2rem;
