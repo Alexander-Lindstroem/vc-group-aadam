@@ -90,3 +90,4 @@ let animals = [{
 },
 ]
 
+let initialShowcaseHTML = ''
