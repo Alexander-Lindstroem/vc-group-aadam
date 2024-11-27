@@ -63,7 +63,7 @@ new Animal(
     "Only found on Rottnest Island and a few places on mainland Western Australia"
 ),
 new Animal(
-    "Frill-necked lizard",
+    "Frill-Necked Lizard",
 
     20,
 
@@ -81,7 +81,7 @@ new Animal(
 ),
 
 new Animal(
-    "Hawksbill turtle",
+    "Hawksbill Turtle",
 
     50,
 
@@ -99,6 +99,7 @@ new Animal(
 
 new Animal(
     "Perentie",
+
     20,
 
     "reptile",
@@ -164,21 +165,22 @@ let initialShowcaseHTML = `
         <div class="welcome-description">This is our animal Zoo. WOW</div>
 `
 let showcase = document.querySelector(".showcase");
+console.log(showcase);
 showcase.innerHTML = initialShowcaseHTML;
 
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
 
 animalButtons.forEach(b => b.addEventListener('click', ()=> {
-    let activeAnimal = animalButtons.find(b => b.classList.contains("active"));
+    let activeAnimal = animalButtons.find(b => b.classList.contains("animal-active"));
 
     if (activeAnimal === undefined || activeAnimal != b) {
         if (activeAnimal != undefined) {
-            activeAnimal.classList.remove("active");
-            b.classList.add("active");
+            activeAnimal.classList.remove("animal-active");
+            b.classList.add("animal-active");
         } 
-        else b.classList.add("active");
-        let selectedAnimal = animals.find(a => a.name === b.innerHTML);
-
+        else b.classList.add("animal-active");
+        let selectedAnimal = animals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
+        console.log(selectedAnimal);
         showcase.innerHTML = `
         <div class="title">${selectedAnimal.name}</div>
         <div class="container">
@@ -223,7 +225,7 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
         `
     }
     else {
-        activeAnimal.classList.remove("active");
+        activeAnimal.classList.remove("animal-active");
         showcase.innerHTML = initialShowcaseHTML;
     }   
 }))
