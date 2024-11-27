@@ -26,7 +26,17 @@
 font-size: 1.2rem;
 }
 
+.welcome-description {
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
 .description {
     width: 30rem;
     font-size: 1.4rem;
+}
+
+.active {
+    background-color: brown;
 }

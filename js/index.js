@@ -90,4 +90,20 @@ let animals = [{
 },
 ]
 
-let initialShowcaseHTML = ''
+let initialShowcaseHTML = `
+        <div class="title">Welcome!</div>
+        <div class="welcome-description">This is our animal Zoo. WOW</div>
+`
+let showcase = document.querySelector(".showcase");
+showcase.innerHTML = initialShowcaseHTML;
+
+let animalButtons = Array.from(document.querySelectorAll(".animal"));
+
+animalButtons.forEach(b => b.addEventListener('click', ()=> {
+    if (b.classList.contains("active")) b.classList.remove("active")
+    else b.classList.add("active");
+    console.log(b.classList);
+    while(b.classList.contains("active"))
+}))
+
+
