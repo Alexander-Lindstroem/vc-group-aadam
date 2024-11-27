@@ -7,95 +7,112 @@
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/sidebar.js"defer></script>
     <title>Home</title>
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <img src="./icons/paw.png" alt="">
-        </div>
-
-        <h1>Australian Zoo</h1>
-
-        <div class="menu-button">
-            <img src="./icons/page-menu.png" alt="">
+        <div class="header-content">
+            <div class="logo">
+                
+            </div>
+        
+            <h1>Australian Zoo</h1>
+        
+            <div class="menu-button">
+                <img src="./icons/page-menu.png" alt="">
+            </div>
         </div>
     </header>
 
-    <section class="sidebar">
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="./icons/paw.png" alt="paw" class="iconpaw" id="btn">
+               
         <ul>
-            <li>
-                <div class="animal">Echidna</div>
+        <li>
+        <a href="#">
+            <img src="./icons/echidna.png" alt="echidna Icon" class="icon-side echidna-icon">
+        <span class="nav-item">Echidna</span>
+             </a>
+        <span class="tooltip">Echidna</span>
+        </li>
+        <li>
+            <a href="#">
+            <img src="./icons/tasmanian-devil.png" alt="tasmanian-devil  Icon" class="icon-side tasmanian-devil -icon">
+            <span class="nav-item">Tasmanian Devil</span>
+                 </a>
+            <span class="tooltip">Tasmanian Devil</span>
             </li>
             <li>
-                <div class="animal">Tasmanian Devil</div>
-            </li>
-            <li>
-                <div class="animal">Quokka</div>
-            </li>
-            <li>
-                <div class="animal">Frill-necked lizard</div>
-            </li>
-            <li>
-                <div class="animal">Hawksbill turtle</div>
-            </li>
-            <li>
-                <div class="animal">Perentie</div>
-            </li>
-            <li>
-                <div class="animal">Cassowary</div>
-            </li>
-            <li>
-                <div class="animal">Kookaburra</div>
-            </li>
-            <li>
-                <div class="animal">Yellow-Tailed Black Cockatoo</div>
-            </li>
+                <a href="#">
+                <img src="./icons/quokka.png" alt="quokka Icon" class="icon-side quokka-icon">
+                <span class="nav-item">Quokka</span>
+                     </a>
+                <span class="tooltip">Quokka</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./icons/Frill-necked-lizard.png" alt="frill-necked lizard Icon" class="icon-side frill-necked lizard-icon">
+                    <span class="nav-item">Frill-necked lizard</span>
+                         </a>
+                    <span class="tooltip">Frill-necked lizard</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./icons/hawksbill-turtle.png" alt="hawksbill-turtle Icon" class="icon-side hawksbill-turtle-icon">
+                        <span class="nav-item">Hawksbill Turtle</span>
+                             </a>
+                        <span class="tooltip">Hawksbill Turtle</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./icons/monitor-lizard.png" alt="perentie  Icon" class="icon-side perentie -icon">
+                            <span class="nav-item">Perentie</span>
+                                 </a>
+                            <span class="tooltip">Perentie</span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./icons/cassowary.png" alt="cassowary Icon" class="icon-side cassowary-icon">
+                                <span class="nav-item">Cassowary</span>
+                                     </a>
+                                <span class="tooltip">Cassowary</span>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./icons/kookaburra.png" alt="kookaburra Icon" class="icon-side kookaburra-icon">
+                                    <span class="nav-item">Kookaburra</span>
+                                         </a>
+                                    <span class="tooltip">Kookaburra</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./icons/cockatoo.png" alt="yellow-tailed-black-cockatoo Icon" class="icon-side eyellow-tailed-black-cockatoo-icon">
+                                        <span class="nav-item">Yellow Tailed Black Cockatoo</span>
+                                             </a>
+                                        <span class="tooltip">Yellow Tailed Black Cockatoo</span>
+                                        </li>
+                
         </ul>
-    </section>
-    <main class="showcase">
-        <!-- <div class="title">Welcome</div>
-        <div class="container">
-            <div class="statistics">
-                <ul>
-                    <li>
-                        <p>lifespan: 50 years</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>group: mammals</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>food: insects such as ants and termites, beetle larvae and worms</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>length: 76cm</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>weight: 10kg</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>found: Throughout Australia</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="description">
-                <p>
-                    Echidnas, also called spiny anteaters, are walking contradictions. They are mammals, but they lay eggs. They are often classified as long- or sort-beaked, but don't have beaks at all, in the traditional sense; they have fleshy noses that can be either on the long side or rather short. They don't really look like true anteaters (Myrmecophaga tridactyla), either, and they are not closely related to them. They are spiny, though; their bodies are covered with hollow, barbless quills. Echidnas are monotremes, egg-laying mammals. The only other living monotreme is the platypus.
-                </p>
-            </div>
-        </div> -->
-    </main>
-    <script src="./js/index.js"></script>
+    </div>
+</div>
+</div>
+<footer> 
+    <div>
+        <h2>Emails</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+        <p>Made By Team AADAM</p>
+        <p>Copyright &copy; 2024 Australia Zoo</p>
+    </div>
+</footer>
 </body>
+
 </html>
