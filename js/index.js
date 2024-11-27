@@ -100,10 +100,66 @@ showcase.innerHTML = initialShowcaseHTML;
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
 
 animalButtons.forEach(b => b.addEventListener('click', ()=> {
-    if (b.classList.contains("active")) b.classList.remove("active")
-    else b.classList.add("active");
-    console.log(b.classList);
-    while(b.classList.contains("active"))
+    let activeAnimal = animalButtons.find(b => b.classList.contains("active"));
+    console.log(activeAnimal);
+    if (activeAnimal === undefined || activeAnimal != b) {
+        if(activeAnimal === undefined) b.classList.add("active");
+        else
+        {
+            animalButtons.find(b => b.classList.contains("active")).classList.remove("active");
+            b.classList.add("active");
+        } 
+        let selectedAnimal = animals.find(a => a.name === b.innerHTML);
+
+        showcase.innerHTML = `
+        <div class="title">${selectedAnimal.name}</div>
+        <div class="container">
+            <div class="statistics">
+                <ul>
+                    <li>
+                        <p>lifespan: ${selectedAnimal.lifespan} years</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>group: ${selectedAnimal.group}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>food: ${selectedAnimal.food}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>length: ${selectedAnimal.length}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>weight: ${selectedAnimal.weight}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>found: ${selectedAnimal.habitat}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="description">
+                <p>
+                    ${selectedAnimal.description}
+                </p>
+            </div>
+        </div>
+        `
+    }
+    else if(activeAnimal === b){
+        animalButtons.find(b => b.classList.contains("active")).classList.remove("active");
+        showcase.innerHTML = initialShowcaseHTML;
+    }
+
+    
 }))
 
 
