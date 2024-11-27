@@ -129,3 +129,40 @@
 .sidebar ul {
     margin-top: 90px;
 }
+
+
+@media (max-width: 768px) {
+
+    .sidebar.active ~ .main-content {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+    
+    .sidebar.active {
+        width: 150px;
+    }
+
+    .sidebar ul {
+        margin-top: 80px;
+    }
+
+    .icon {
+        margin-right: 20px ;
+
+}
+
+.sidebar.active #btn {
+    left: 80%;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 105%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+
+}
