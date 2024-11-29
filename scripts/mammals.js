@@ -19,7 +19,8 @@ let animals = [
         76,
         10,
         "Throughout Australia"
-    )
+    ),
+
     new Animal(
         "Tasmanian Devil",
         5,
@@ -29,7 +30,8 @@ let animals = [
         70,
         10,
         "Tasmania"
-    )
+    ),
+
     new Animal(
         "Quokka",
         10,
@@ -40,8 +42,8 @@ let animals = [
         3,
         "Only found on Rottnest Island and a few places on mainland Western Australia"
     )
-    
-]
+];
+
 
 
 
