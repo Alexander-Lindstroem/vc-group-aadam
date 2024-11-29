@@ -9,4 +9,8 @@ function Animal(name, lifespan, group, food, description, length, weight, found)
     this.found = found;
 }
 
-
+let animals = [
+    new Animal(
+        
+    )
+]
