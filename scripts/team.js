@@ -22,13 +22,12 @@ const constructSidebarList = () => {
     team.forEach(member => {
         list.innerHTML += ` <li>
                                 <a href="#">
-                                    <img src="../icons/echidna.png" alt="${member.firstName.toLowerCase()} Icon" class="icon-side ${member.firstName.toLowerCase()}-icon">
+                                    <img src="../icons/person.png" alt="${member.firstName.toLowerCase()} Icon" class="icon-side ${member.firstName.toLowerCase()}-icon">
                                     <span class="nav-item">${member.firstName}</span>
                                 </a>
                             <span class="tooltip">${member.firstName}</span>
                             </li>`
     });
-    
 }
 
 constructSidebarList();
