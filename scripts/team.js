@@ -13,6 +13,6 @@ let alex = new Member("Alexander", "Lindström", 31, "Sickla", "Japanese")
 let dimitar = new Member("Dimitar", "Manastirski", 21, "Bromma", "Workout")
 let mustafa = new Member("Mustafa", "Larhnimi", 34, "Täby", "Guitar")
 let andre = new Member("André", "Torabpour", 40, "Råcksta", "Guitar")
-let adam = new Member("Adam", "Placeholder", 1111, "Placeholder", "Placeholder")
+let adam = new Member("Adam", "Kaya", 34, "Sätra", "Music")
 
 let team = [alex, dimitar, mustafa, andre, adam]
