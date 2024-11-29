@@ -119,7 +119,7 @@
 }
 
 .sidebar ul li {
-    position: relative; /* Detta påverkar tooltipens positionering */
+    position: relative; 
 }
 
 
