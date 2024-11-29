@@ -32,13 +32,3 @@ const constructSidebarList = () => {
 }
 
 constructSidebarList();
-
-
-
-/*<li>
-<a href="#">
-    <img src="../icons/echidna.png" alt="echidna Icon" class="icon-side echidna-icon">
-    <span class="nav-item">Echidna</span>
-</a>
-<span class="tooltip">Echidna</span>
-</li>*/
