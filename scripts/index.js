@@ -9,7 +9,6 @@ function Animal(name, lifespan, group, food, description, length, weight, habita
     this.habitat = habitat;
 }
 
-
 let animals = [
 new Animal(
     "Echidna",
@@ -136,7 +135,9 @@ new Animal(
     "bird",
 
     "insects such as ants and termites, beetle larvae and worms",
+
     "Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family, with females weighing up to one pound and growing to 43 cm in length. Its beak can reach 10 cm long and is used to snatch a variety of invertebrates and small vertebrates, including the occasional small snake. Since being introduced in western Australia and New Zealand, the kookaburra has angered farmers by preying on their fowl. The laughing kookaburra has dark brown wing plumage and a white head and underside. Dark brown eye stripes run across its face and its upper bill is black. Its reddish-coloured tail is patterned with black bars.",
+
     "43cm",
 
     300 / 1000,
@@ -145,7 +146,9 @@ new Animal(
 ),
 new Animal(
     "Yellow-Tailed Black Cockatoo",
+
     41,
+
     "bird",
 
     "Fruit, seeds and other plant material",
@@ -159,13 +162,12 @@ new Animal(
     "SE Australia")
 ]
 
-
 let initialShowcaseHTML = `
         <div class="title">Welcome!</div>
         <div class="welcome-description">This is our animal Zoo. WOW</div>
 `
+
 let showcase = document.querySelector(".showcase");
-console.log(showcase);
 showcase.innerHTML = initialShowcaseHTML;
 
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
@@ -179,8 +181,9 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
             b.classList.add("animal-active");
         } 
         else b.classList.add("animal-active");
+
         let selectedAnimal = animals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
-        console.log(selectedAnimal);
+
         showcase.innerHTML = `
         <div class="title">${selectedAnimal.name}</div>
         <div class="container">
