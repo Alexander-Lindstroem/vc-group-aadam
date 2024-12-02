@@ -29,5 +29,5 @@ const constructSidebarList = () => {
                             </li>`
     });
 }
-
+    
 constructSidebarList();
