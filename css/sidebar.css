@@ -22,16 +22,23 @@
     
 }
 
+.container {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+}
+
 
 .sidebar {
-    position: absolute;
-    top: 0;
+    position: flex;
+    top: 20px;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.822);
     padding: .4rem .8rem;
     transition: all 0.5s ease;
+    
 }
 
 .sidebar.active ~ .main-content {
@@ -44,8 +51,8 @@
 }
 
 .sidebar #btn {
-    position: absolute;
-    top: .4rem;
+    position: relative;
+    top: -5rem;
     left: 50%;
     font-size: 1.2rem;
     line-height: 50px;
@@ -63,7 +70,7 @@
     position: relative;
     list-style-type: none;
     height: 50px;
-    width: 90%;
+    width: 100%;
     margin: 0.8rem auto;
     line-height: 50px;
 }
@@ -79,6 +86,19 @@
 .sidebar ul li a:hover {
     background-color: white;
     color: black;
+}
+
+.sidebar ul li a.active {
+    background-color: white; 
+    color: #333; 
+    padding: 1px; 
+    border-radius: .8rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.sidebar ul li a .nav-item {
+    font-size: 16px; 
+    color: inherit;
 }
 
 .sidebar ul li a i {
@@ -132,7 +152,8 @@
 }
 
 .sidebar ul {
-    margin-top: 90px;
+    margin-top: -10px;
+
 }
 
 
