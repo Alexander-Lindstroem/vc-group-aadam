@@ -1,4 +1,5 @@
-function Bird(name, lifespan, group, food, description, length, weight, found) {
+class Bird {
+  constructor(name, lifespan, group, food, description, length, weight, found) {
 
     this.name = name
     this.lifespan = lifespan
@@ -9,6 +10,7 @@ function Bird(name, lifespan, group, food, description, length, weight, found) {
     this.weight = weight
     this.found = found
   }
+}
   
   let birds = [
   new Bird 
