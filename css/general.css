@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* You can introduce different colors if needed */
 :root {
     --background-main-color: rgb(255, 255, 242);
@@ -9,13 +10,21 @@
     --text-secondary-color: rgb(255, 255, 255);   
 }
 
+=======
+>>>>>>> 0a66e554b122b9c5be63787de8904a58595e3e59
 * {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-height: 100%;
 }
 
 html {
     height: 100vh;
 }
+<<<<<<< HEAD
 
 body {
     margin: 0;
@@ -109,3 +118,5 @@ footer {
         padding: 8px 0;
     }
 }
+=======
+>>>>>>> 0a66e554b122b9c5be63787de8904a58595e3e59
