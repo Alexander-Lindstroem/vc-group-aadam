@@ -1,0 +1,5 @@
+ul li a .nav-item.active {
+    background-color: #ffffff !important; /* Mörk bakgrund */
+    color: rgb(222, 238, 6) !important; /* Vit text */
+    border-radius: 5px !important;
+}
