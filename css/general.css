@@ -1,4 +1,13 @@
-
+/* You can introduce different colors if needed */
+:root {
+    --background-main-color: rgb(255, 255, 242);
+    --background-secondary-color: rgb(0, 37, 38);
+    --button-color: rgb(0, 135, 103);
+    --button-optional-color: rgb(251, 255, 54);
+    --button-secondary-color: rgb(216, 216, 216);
+    --text-main-color: rgb(0, 0, 0); 
+    --text-secondary-color: rgb(255, 255, 255);   
+}
 
 * {
     box-sizing: border-box;
@@ -31,6 +40,10 @@ header h1 {
 main {
     flex: 1;
     padding: 20px;
+}
+
+.main-content {
+    flex-grow: 1;
 }
 
 .animal-display {
