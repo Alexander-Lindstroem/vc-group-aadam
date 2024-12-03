@@ -4,39 +4,33 @@
     box-sizing: border-box;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+.sidebar ul .menu-button {
+    padding-bottom: 4rem;
+}
+
+.icon-paw {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
 .icon-side {
     width: 24px;
     height: 24px;
     margin-right: 40px;
     margin-left: 15px;
     vertical-align: middle;
-    left: 40px
-}
-
-.iconpaw {
-    margin-top: 10px;
-    color: white;
-    width: 50px;
-    height: 50px;
-    margin-left: 5px;
-    
-}
-
-.sidebar {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    height: 100%;
-    width: 80px;
-    background-color: rgba(0, 0, 0, 0.822);
-    padding: .4rem .8rem;
-    transition: all 0.5s ease;
-    
-}
-
-.sidebar.active ~ .main-content {
-    left: 250px;
-    width: calc(100% - 250px);
 }
 
 .sidebar.active {
@@ -45,7 +39,6 @@
 
 .sidebar #btn {
     position: relative;
-    top: -5rem;
     left: 50%;
     font-size: 1.2rem;
     line-height: 50px;
@@ -56,8 +49,6 @@
 .sidebar.active #btn {
     left: 90%;
 }
-
-
 
 .sidebar ul li {
     position: relative;
@@ -81,7 +72,7 @@
     color: black;
 }
 
-.sidebar ul li a.active {
+.sidebar ul li a.animal-active {
     background-color: white; 
     color: #333; 
     padding: 1px; 
@@ -127,7 +118,7 @@
     padding: 0.4rem 1.2rem;
     line-height: 1.8rem;
     z-index: 20;
-    opacity: 0;
+    display: none;
 
 }
 
@@ -137,20 +128,15 @@
 
 
 .sidebar ul li:hover .tooltip {
-    opacity: 1;
+    display: block;
 }
 
 .sidebar.active ul li .tooltip {
     display: none;
 }
 
-.sidebar ul {
-    margin-top: -10px;
 
-}
-
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     .sidebar.active ~ .main-content {
         left: 250px;
@@ -184,4 +170,4 @@
 }
 
 
-}
+} */
