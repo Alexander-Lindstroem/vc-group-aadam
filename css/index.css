@@ -4,3 +4,45 @@ body {
     height: 100vh;
 }
 
+.showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-left: 12rem;
+    height: 100vh;
+    max-width: 100%;
+    padding: 2rem;
+    gap: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+.statistics {
+font-size: 1.2rem;
+}
+
+.welcome-description {
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.description {
+    width: 30rem;
+    font-size: 1.4rem;
+}
+
+.animal-active {
+    background-color: brown;
+}
