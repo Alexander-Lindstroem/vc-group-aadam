@@ -80,3 +80,9 @@ body {
         flex-direction: column;
     }
 }
+
+@media (max-width: 605px) {
+    .main-content {
+        margin-left: 80px;
+    }
+}
