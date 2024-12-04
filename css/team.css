@@ -17,6 +17,7 @@ body {
 
 .team-content__image {
     border: solid 3px black;
+    border-radius: 10px;
     margin: 16px;
 }
 

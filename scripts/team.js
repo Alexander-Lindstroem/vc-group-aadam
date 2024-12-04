@@ -11,7 +11,7 @@ function Member(firstName, lastName, age, location, hobby) {
 
 let team = [
     alex = new Member("Alexander", "Lindström", 31, "Sickla", "Japanese"),
-    dimitar = new Member("Dimitar", "Manastirski", 21, "Bromma", "Workout"),
+    dimitar = new Member("Dimitar", "Manastirski", 21, "Bromma", "Working out"),
     mustafa = new Member("Mustafa", "Larhnimi", 34, "Täby", "Guitar"),
     andre = new Member("Andre", "Torabpour", 40, "Råcksta", "Guitar"),
     adam = new Member("Adam", "Kaya", 34, "Sätra", "Music"),
@@ -41,13 +41,13 @@ buttons.forEach(button => {
         if (button.classList.contains(teamMemberName)) {
             content.innerHTML = `<div class="team-content__container">
                                     <img src="../image/${teamMemberName}.png" alt="picture of ${teamMemberName}" width="25%" class="team-content__image">
-                                        <div class="team-content__text-container">
-                                            <h3 class="team-content__title">${teamMember.fullName}</h3>
-                                            <p class="team-content__text-paragraph">${teamMember.age} years old.</p>
-                                            <p class="team-content__text-paragraph">Lives in ${teamMember.location}.</p>
-                                            <p class="team-content__text-paragraph">Has ${teamMember.hobby.toLowerCase()} as a hobby.</p>
-                                        </div>
-                                    </div>`
+                                    <div class="team-content__text-container">
+                                        <h3 class="team-content__title">${teamMember.fullName}</h3>
+                                        <p class="team-content__text-paragraph">${teamMember.age} years old.</p>
+                                        <p class="team-content__text-paragraph">Lives in ${teamMember.location}.</p>
+                                        <p class="team-content__text-paragraph">Has ${teamMember.hobby.toLowerCase()} as a hobby.</p>
+                                    </div>
+                                </div>`
             buttons.forEach(otherButton => {otherButton.classList.remove("selected")})
             button.classList.add("selected")
         }
