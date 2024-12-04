@@ -15,6 +15,11 @@ body {
     flex-grow: 1;
 }
 
+.team-content__image {
+    border: solid 3px black;
+    margin: 16px;
+}
+
 .team-content__container {
     display: flex;
     flex-direction: column;
@@ -30,6 +35,8 @@ body {
     font-size: 1.4rem;
 }
 
-footer {
-    flex-grow: 1;
+.selected,
+.selected.team-sidebar-button{
+    background-color: white;
+    color: black;
 }

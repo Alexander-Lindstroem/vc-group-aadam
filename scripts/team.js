@@ -29,7 +29,6 @@ const constructSidebarList = () => {
                             </li>`
     });
 }
-    
 constructSidebarList();
 
 let buttons = Array.from(document.querySelectorAll(".team-sidebar-button"))
@@ -47,9 +46,11 @@ let content = document.querySelector(".team-content")
                                                 <h3 class="team-content__title">${teamMember.fullName}</h3>
                                                 <p class="team-content__text-paragraph">${teamMember.age} years old.</p>
                                                 <p class="team-content__text-paragraph">Lives in ${teamMember.location}.</p>
-                                                <p class="team-content__text-paragraph">Has ${teamMember.hobby} as a hobby.</p>
+                                                <p class="team-content__text-paragraph">Has ${teamMember.hobby.toLowerCase()} as a hobby.</p>
                                             </div>
                                         </div>`
+                buttons.forEach(otherButton => {otherButton.classList.remove("selected")})
+                button.classList.add("selected")
             }
         })
     })
