@@ -1,0 +1,35 @@
+main {
+    padding: 0;
+}
+
+body {
+    background-image: none;
+}
+
+.team-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-content {
+    flex-grow: 1;
+}
+
+.team-content__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-content__title {
+    font-size: 2rem;
+    margin: 16px 0;
+}
+
+.team-content__text-paragraph {
+    font-size: 1.4rem;
+}
+
+footer {
+    flex-grow: 1;
+}

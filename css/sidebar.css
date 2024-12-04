@@ -134,7 +134,7 @@
     padding: 0.4rem 1.2rem;
     line-height: 1.8rem;
     z-index: 20;
-    opacity: 0;
+    display: none;
 
 }
 
@@ -144,7 +144,7 @@
 
 
 .sidebar ul li:hover .tooltip {
-    opacity: 1;
+    display: block;
 }
 
 .sidebar.active ul li .tooltip {
