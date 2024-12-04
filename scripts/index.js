@@ -165,6 +165,7 @@ new Animal(
 let initialShowcaseHTML = `
         <div class="title">Welcome!</div>
         <div class="welcome-description">This is our animal Zoo. WOW</div>
+        <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
 `
 
 let showcase = document.querySelector(".showcase");
@@ -225,6 +226,8 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
                 </p>
             </div>
         </div>
+        
+        <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
         `
     }
     else {

@@ -1,12 +1,10 @@
 footer {
-    align-self: flex-end;
     display: flex;
     justify-content: space-around;
     width: 100%;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 37, 38);
     padding: 1rem;
-    margin: 0;
     font-size: 1.1rem;
 }
 
