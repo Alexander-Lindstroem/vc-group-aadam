@@ -9,8 +9,7 @@ function Animal(name, lifespan, group, food, description, length, weight, found)
     this.found = found;
 }
 
-let reptiles = [
-frillNeckedLizard = new Animal(
+let frillNeckedLizard = new Animal(
     "Frill necked lizard",
     "20 years", 
     "Reptile", 
@@ -19,9 +18,9 @@ frillNeckedLizard = new Animal(
     "90cm", 
     "1 kg", 
     "Northern Australia"
-),
+)
 
-hawksbillTurtle = new Animal(
+let hawksbillTurtle = new Animal(
     "Hawkbill turtle",
     "50 years ", 
     "Reptile", 
@@ -30,9 +29,9 @@ hawksbillTurtle = new Animal(
     "80cm (carapace)", 
     "50kg",
     "Tropical coasts of Queensland, Northern Territory and Western Australia."
-),
+)
 
-perentie  = new Animal(
+let perentie  = new Animal(
     "Perentie",
     "20 years", 
     "Reptile", 
@@ -41,82 +40,63 @@ perentie  = new Animal(
     "2.5 m", 
     "20kg", 
     "Deserts"
-),
-]
+)
 
 
-console.log(reptiles);
-
-let animalInfo = document.querySelector(".info-animal")
-
-
-const constructSidebarList = () => {
-    let list = document.querySelector(".sidebar__list");
-    reptiles.forEach(animal => {
-        let animalNameButton = document.createElement("li");
-        animalNameButton.innerHTML =  `<a href="#" class="nav-link" data-name="${animal.name.toLowerCase()}">
-            <img src="../icons/${animal.name.toLowerCase()}.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
-            <span class="nav-item" id="frill-necked-lizard">${animal.name}</span>
-        </a>
-        <span class="tooltip lizard">${animal.name}</span>`
-
-        animalNameButton.addEventListener("click", (event) => {
-            let welcomeMessage = document.querySelector(".welcome");
-             
-    if (animalInfo.classList.contains("hide")) {
-        
-        animalInfo.classList.remove("hide");
-        welcomeMessage.classList.add("hide");
-    } else {
-       
-        animalInfo.classList.add("hide");
-        welcomeMessage.classList.remove("hide");
-    }
+let team = [frillNeckedLizard, hawksbillTurtle, perentie]
+console.log(team);
 
 
-        animalInfo.innerHTML = `
-           <h2>${animal.name}</h2>
-            <p>${animal.description}</p>
-            <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
-            <p><strong>Group:</strong> ${animal.group}</p>
-            <p><strong>Food:</strong> ${animal.food}</p>
-            <p><strong>Length:</strong> ${animal.length}</p>
-            <p><strong>Weight:</strong> ${animal.weight}</p>
-            <p><strong>Found:</strong> ${animal.found}</p>
-        `
-
-
-              
-
-        } )
-        list.appendChild(animalNameButton)
+//Sidebar buttens
+const updateFrillNeckedLizardText = (newText) => {
+    const elements = document.querySelectorAll('#frill-necked-lizard, .tooltip.lizard');
+    elements.forEach(element => {
+        element.textContent = newText;
     });
-}
-constructSidebarList()
+};
+
+const updateHawksbillTurtleText = (newText) => {
+    const elements = document.querySelectorAll('#hawksbill-turtle, #hawsbill');
+    elements.forEach(element => {
+        element.textContent = newText;
+    });
+};
+
+const updatePerentieText = (newText) => {
+    const elements = document.querySelectorAll('#perentie');
+    elements.forEach(element => {
+        element.textContent = newText;
+    });
+};
+
+updateFrillNeckedLizardText("Frill necked Lizard");
+updateHawksbillTurtleText("Hawksbill Turtle");
+updatePerentieText("Perentie")
 
 
+/*document.addEventListener("DOMContentLoaded", () => {
+    // Hämta alla element med klassen nav-item
+    const navItems = document.querySelectorAll(".nav-item");
 
-/*
-                    <li>
-                        <a href="#" class="nav-link" data-name="frill-necked-lizard">
-                            <img src="../icons/Frill-necked-lizard.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
-                            <span class="nav-item" id="frill-necked-lizard">lizard</span>
-                        </a>
-                        
-                        <span class="tooltip lizard">lizard</span>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link" data-name="hawksbill-turtle">
-                            <img src="../icons/hawksbill-turtle.png" alt="Hawksbill Turtle Icon" class="icon-side hawksbill-turtle-icon">
-                            <span class="nav-item" id="hawksbill-turtle">---Hawksbill Turtle----</span>
-                        </a>
-                        <span class="tooltip hawsbill" id="hawsbill">---Hawksbill Turtle----</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../icons/monitor-lizard.png" alt="Quokka Icon" class="icon-side Perentie-icon">
-                            <span class="nav-item" id="perentie">---Perentie--- </span>
-                        </a>
-                        <span class="tooltip perentie" id="perentie">---Perentie--- </span>
-                    </li>
-*/
+    // Lägg till klickhändelse för varje nav-item
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            // Ta bort "active"-klassen från alla nav-item
+            navItems.forEach(nav => nav.classList.remove("active"));
+
+            // Lägg till "active"-klassen på det klickade elementet
+            item.classList.add("active");
+        });
+    });
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            sidebarLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+});

@@ -1,23 +1,5 @@
 ul li a .nav-item.active {
-    background-color: #ffffff !important; 
-    color: rgb(222, 238, 6) !important; 
+    background-color: #ffffff !important; /* Mörk bakgrund */
+    color: rgb(222, 238, 6) !important; /* Vit text */
     border-radius: 5px !important;
-}
-
-
-.info-animal{
-    background-color: rgb(194, 191, 52);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.container {
-    flex-direction: row;
-}
-
-.hide {
-    display: none;
 }
