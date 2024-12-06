@@ -47,6 +47,8 @@ function Bird (name, lifespan, group, food, description, length, weight, found) 
   )
 ]
 
+let sidebarHTML = document.querySelector(".sidebar ul");
+
 birds.forEach(bird => {
   sidebarHTML.innerHTML += `
           <li>
@@ -58,3 +60,4 @@ birds.forEach(bird => {
           </li>
   `
 });
+
