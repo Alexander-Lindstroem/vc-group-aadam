@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/menu.css">
     <script src="./scripts/sidebar.js"defer></script>
+    <script src="./scripts/reptiles.js" defer ></script>
     <title>Home</title>
 </head>
 <body>
@@ -44,6 +45,8 @@
             </li>
         </ul>
     </div>
+<section class="main-content">
+    <div class="container">
     <div class="sidebar">
         <div class="top">
             <div class="logo">
@@ -59,7 +62,7 @@
         </li>
         <li>
             <a href="#">
-            <img src="./icons/tasmanian-devil.png" alt="tasmanian-devil  Icon" class="icon-side tasmanian-devil -icon">
+            <img src="./icons/tasmanian-devil.png" alt="tasmanian-devil  Icon" class="icon-side tasmanian-devil-icon">
             <span class="nav-item">Tasmanian Devil</span>
                  </a>
             <span class="tooltip">Tasmanian Devil</span>
@@ -73,7 +76,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="./icons/Frill-necked-lizard.png" alt="frill-necked lizard Icon" class="icon-side frill-necked lizard-icon">
+                        <img src="./icons/Frill-necked-lizard.png" alt="frill-necked-lizard Icon" class="icon-side frill-necked-lizard-icon">
                     <span class="nav-item">Frill-necked lizard</span>
                          </a>
                     <span class="tooltip">Frill-necked lizard</span>
@@ -87,12 +90,14 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./icons/monitor-lizard.png" alt="perentie  Icon" class="icon-side perentie -icon">
-                            <span class="nav-item">Perentie</span>
+                                <img src="./icons/monitor-lizard.png" alt="perentie  Icon" class="icon-side perentie-icon">
+                            <span class="nav-item perentie-klick">Perentie</span>
                                  </a>
                             <span class="tooltip">Perentie</span>
                             </li>
                             <li>
+                                <div id="perentie-info"></div>
+
                                 <a href="#">
                                     <img src="./icons/cassowary.png" alt="cassowary Icon" class="icon-side cassowary-icon">
                                 <span class="nav-item">Cassowary</span>
@@ -118,7 +123,9 @@
     </div>
 </div>
 </div>
-<footer> 
+</div>
+</section>
+<footer  class="footer"> 
     <div>
         <h2>Emails</h2>
         <p>Lorem ipsum dolor sit amet.</p>
