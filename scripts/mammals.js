@@ -44,6 +44,93 @@ let animals = [
     )
 ];
 
+let initialShowcaseHTML = `
+        <div class="title">Welcome!</div>
+        <div class="welcome-description">This is our animal Zoo. WOW</div>
+        <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
+    `
+
+let showcase = document.querySelector(".showcase");
+showcase.innerHTML = initialShowcaseHTML;
+
+let sidebarHTML = document.querySelector(".sidebar ul");
+
+animals.forEach(animal => {
+    sidebarHTML.innerHTML += `
+            <li>
+                <a href="#" class="animal">
+                    <img src="./icons/${animal.name.toLowerCase()}.png" alt="${animal.name.toLowerCase()} Icon" class="icon-side ${animal.name.toLowerCase()}-icon">
+                    <span class="nav-item">${animal.name}</span>
+                </a>
+                <span class="tooltip">${animal.name}</span>
+            </li>
+    `
+});
+
+let animalButtons = Array.from(document.querySelectorAll(".animal"));
+
+animalButtons.forEach(b => b.addEventListener('click', ()=> {
+    let activeAnimal = animalButtons.find(b => b.classList.contains("animal-active"));
+
+    if (activeAnimal === undefined || activeAnimal != b) {
+        if (activeAnimal != undefined) {
+            activeAnimal.classList.remove("animal-active");
+            b.classList.add("animal-active");
+        } 
+        else b.classList.add("animal-active");
+
+        let selectedAnimal = animals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
+
+        showcase.innerHTML = `
+        <div class="title">${selectedAnimal.name}</div>
+        <div class="container">
+            <div class="statistics">
+                <ul>
+                    <li>
+                        <p>lifespan: ${selectedAnimal.lifespan} years</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>group: ${selectedAnimal.group}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>food: ${selectedAnimal.food}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>length: ${selectedAnimal.length}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>weight: ${selectedAnimal.weight}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>found: ${selectedAnimal.habitat}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="description">
+                <p>
+                    ${selectedAnimal.description}
+                </p>
+            </div>
+        </div>
+
+        <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
+        `
+    }
+    else {
+        activeAnimal.classList.remove("animal-active");
+        showcase.innerHTML = initialShowcaseHTML;
+    }   
+}))
 
 
 
