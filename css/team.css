@@ -6,19 +6,32 @@ body {
     background-image: none;
 }
 
-.team-main {
+.main-content {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-content {
     flex-grow: 1;
 }
 
+.team-content__default {
+    text-align: center;
+}
+
+.team-content__default h3 {
+    font-size: 3rem;
+}
+
+.team-content__default p {
+    font-size: 2rem;
+}
 .team-content__image {
     border: solid 3px black;
     border-radius: 10px;
     margin: 16px;
+    width: 25%;
 }
 
 .team-content__container {
@@ -41,4 +54,18 @@ body {
 .selected.team-sidebar-button{
     background-color: white;
     color: black;
+}
+
+@media (max-width: 748px){ 
+    .team-content__default h3 {
+        font-size: 2rem;
+    }
+    
+    .team-content__default p {
+        font-size: 1rem;
+    }
+
+    .team-content__image {
+        width: 75%;
+    }
 }
