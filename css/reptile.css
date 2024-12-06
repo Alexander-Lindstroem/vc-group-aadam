@@ -6,7 +6,7 @@ ul li a .nav-item.active {
 
 
 .info-animal{
-    
+    background-color: var(--background-main-color);
     display: grid;
     flex-direction: column; 
     justify-content: center; 
@@ -19,8 +19,8 @@ ul li a .nav-item.active {
     margin-top: 10%;
     margin-bottom: 20%;
     margin-left: 20%;
-    border-radius: 10px;
-    border-color: var(--background-secondary-color);
+    border-radius: 10px black;
+    
     
 
     
