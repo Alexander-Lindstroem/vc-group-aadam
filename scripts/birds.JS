@@ -46,3 +46,15 @@ function Bird (name, lifespan, group, food, description, length, weight, found) 
      "SE Australia"
   )
 ]
+
+birds.forEach(bird => {
+  sidebarHTML.innerHTML += `
+          <li>
+              <a href="#" class="animal">
+                  <img src="../icons/${bird.name.toLowerCase()}.png" alt="${bird.name.toLowerCase()} Icon" class="icon-side ${bird.name.toLowerCase()}-icon">
+                  <span class="nav-item">${bird.name}</span>
+              </a>
+              <span class="tooltip">${bird.name}</span>
+          </li>
+  `
+});
