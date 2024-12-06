@@ -163,6 +163,7 @@ new Animal(
 ]
 
 let showcase = document.querySelector(".showcase");
+let initialShowcaseHTML = showcase.innerHTML;
 
 let sidebarHTML = document.querySelector(".sidebar ul");
 sidebarHTML.innerHTML = `
