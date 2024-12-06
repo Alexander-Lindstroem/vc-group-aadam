@@ -36,7 +36,7 @@ function Bird (name, lifespan, group, food, description, length, weight, found) 
   
   cockatoo = new Bird
   (
-    "Yellow Tailed Black Cockatoo", 
+    "Yellow-Tailed Black Cockatoo", 
     "41 years", 
     "bird",
      "Fruit, seeds and other plant material", 
@@ -46,3 +46,17 @@ function Bird (name, lifespan, group, food, description, length, weight, found) 
      "SE Australia"
   )
 ]
+
+let sidebarHTML = document.querySelector(".sidebar ul");
+
+birds.forEach(bird => {
+    sidebarHTML.innerHTML += `
+            <li>
+                <a href="#" class="animal">
+                    <img src="../icons/${bird.name.toLowerCase()}.png" alt="${bird.name.toLowerCase()} Icon" class="icon-side ${bird.name.toLowerCase()}-icon">
+                    <span class="nav-item">${bird.name}</span>
+                </a>
+                <span class="tooltip">${bird.name}</span>
+            </li>
+    `
+});
