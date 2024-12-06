@@ -69,17 +69,17 @@ mammals.forEach(mammal => {
 
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
 
-animalButtons.forEach(b => b.addEventListener('click', ()=> {
-    let activeAnimal = animalButtons.find(b => b.classList.contains("animal-active"));
+animalButtons.forEach(button => button.addEventListener('click', ()=> {
+    let activeAnimal = animalButtons.find(button => button.classList.contains("animal-active"));
 
-    if (activeAnimal === undefined || activeAnimal != b) {
+    if (activeAnimal === undefined || activeAnimal != button) {
         if (activeAnimal != undefined) {
             activeAnimal.classList.remove("animal-active");
-            b.classList.add("animal-active");
+            button.classList.add("animal-active");
         } 
-        else b.classList.add("animal-active");
+        else button.classList.add("animal-active");
 
-        let selectedAnimal = mammals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
+        let selectedAnimal = mammals.find(a => a.name === button.querySelector(".nav-item").innerHTML);
 
         showcase.innerHTML = `
         <div class="title">${selectedAnimal.name}</div>
