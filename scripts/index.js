@@ -166,92 +166,27 @@ let showcase = document.querySelector(".showcase");
 let initialShowcaseHTML = showcase.innerHTML;
 
 let sidebarHTML = document.querySelector(".sidebar ul");
-sidebarHTML.innerHTML = `
-            <li class="animal-button">
-                <img src="./icons/paw.png" alt="paw" class="icon-paw" id="btn">
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/echidna.png" alt="echidna Icon" class="icon-side echidna-icon">
-                    <span class="nav-item">Echidna</span>
-                </a>
-                <span class="tooltip">Echidna</span>
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/tasmanian-devil.png" alt="tasmanian-devil  Icon"
-                        class="icon-side tasmanian-devil-icon">
-                    <span class="nav-item">Tasmanian Devil</span>
-                </a>
-                <span class="tooltip">Tasmanian Devil</span>
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/quokka.png" alt="quokka Icon" class="icon-side quokka-icon">
-                    <span class="nav-item">Quokka</span>
-                </a>
-                <span class="tooltip">Quokka</span>
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/Frill-necked-lizard.png" alt="frill-necked-lizard Icon"
-                        class="icon-side frill-necked-lizard-icon">
-                    <span class="nav-item">Frill-Necked Lizard</span>
-                </a>
-                <span class="tooltip">Frill-Necked Lizard</span>
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/hawksbill-turtle.png" alt="hawksbill-turtle Icon"
-                        class="icon-side hawksbill-turtle-icon">
-                    <span class="nav-item">Hawksbill Turtle</span>
-                </a>
-                <span class="tooltip">Hawksbill Turtle</span>
-            </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/monitor-lizard.png" alt="perentie  Icon" class="icon-side perentie-icon">
-                    <span class="nav-item perentie-klick">Perentie</span>
-                </a>
-                <span class="tooltip">Perentie</span>
-            </li>
-            <li>
-                <div id="perentie-info"></div>
 
-                <a href="#" class="animal">
-                    <img src="./icons/cassowary.png" alt="cassowary Icon" class="icon-side cassowary-icon">
-                    <span class="nav-item">Cassowary</span>
-                </a>
-                <span class="tooltip">Cassowary</span>
-            </li>
+animals.forEach(animal => {
+    sidebarHTML.innerHTML += `
             <li>
                 <a href="#" class="animal">
-                    <img src="./icons/kookaburra.png" alt="kookaburra Icon" class="icon-side kookaburra-icon">
-                    <span class="nav-item">Kookaburra</span>
+                    <img src="./icons/${animal.name.toLowerCase()}.png" alt="${animal.name.toLowerCase()} Icon" class="icon-side ${animal.name.toLowerCase()}-icon">
+                    <span class="nav-item">${animal.name}</span>
                 </a>
-                <span class="tooltip">Kookaburra</span>
+                <span class="tooltip">${animal.name}</span>
             </li>
-            <li>
-                <a href="#" class="animal">
-                    <img src="./icons/cockatoo.png" alt="yellow-tailed-black-cockatoo Icon"
-                        class="icon-side eyellow-tailed-black-cockatoo-icon">
-                    <span class="nav-item">Yellow-Tailed Black Cockatoo</span>
-                </a>
-                <span class="tooltip">Yellow-Tailed Black Cockatoo</span>
-            </li>
-`
+    `
+});
 
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
 
 animalButtons.forEach(b => b.addEventListener('click', ()=> {
     let activeAnimal = animalButtons.find(b => b.classList.contains("animal-active"));
 
-    if (activeAnimal === undefined || activeAnimal != b) {
-        if (activeAnimal != undefined) {
-            activeAnimal.classList.remove("animal-active");
-            b.classList.add("animal-active");
-        } 
-        else b.classList.add("animal-active");
+    if (activeAnimal != b) {
+        if (activeAnimal != undefined) activeAnimal.classList.remove("animal-active");
+        b.classList.add("animal-active");
 
         let selectedAnimal = animals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
 
@@ -305,5 +240,3 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
         showcase.innerHTML = initialShowcaseHTML;
     }   
 }))
-
-
