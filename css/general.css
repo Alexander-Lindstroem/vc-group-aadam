@@ -4,7 +4,7 @@
 
 /* You can introduce different colors if needed */
 :root {
-    --background-main-color: rgb(255, 255, 242);
+    --background-main-color: #fffff2;
     --background-secondary-color: rgb(0, 37, 38);
     --background-optional-color: rgb(49, 33, 39);
     --body-background-color: rgb(95, 58, 73);

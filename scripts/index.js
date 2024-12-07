@@ -161,9 +161,15 @@ new Animal(
 
     "SE Australia")
 ]
+let welcomeBtn = document.querySelector(".welcome-button");
 
 let showcase = document.querySelector(".showcase");
-let initialShowcaseHTML = showcase.innerHTML;
+let initialShowcaseHTML = `
+        <div class="choose-container">
+                <h2>Choose your animal</h2>
+                <img src="./icons/animal-care.png" alt="">
+        </div>
+    `
 
 let sidebarHTML = document.querySelector(".sidebar ul");
 
@@ -181,16 +187,19 @@ animals.forEach(animal => {
 
 let animalButtons = Array.from(document.querySelectorAll(".animal"));
 
-animalButtons.forEach(b => b.addEventListener('click', ()=> {
-    let activeAnimal = animalButtons.find(b => b.classList.contains("animal-active"));
+animalButtons.forEach(btn => btn.addEventListener('click', () => {
+    let activeAnimal = animalButtons.find(btn => btn.classList.contains("animal-active"));
 
-    if (activeAnimal != b) {
+    if (activeAnimal != btn) {
         if (activeAnimal != undefined) activeAnimal.classList.remove("animal-active");
-        b.classList.add("animal-active");
+        btn.classList.add("animal-active");
 
-        let selectedAnimal = animals.find(a => a.name === b.querySelector(".nav-item").innerHTML);
+        let selectedAnimal = animals.find(animal => animal.name === btn.querySelector(".nav-item").innerHTML);
 
-        showcase.innerHTML = `
+        main_content.classList.add("fadeOut");
+        setTimeout(() => {
+            main_content.classList.remove("fadeOut");
+            showcase.innerHTML = `
         <div class="title">${selectedAnimal.name}</div>
         <div class="container">
             <div class="statistics">
@@ -234,9 +243,54 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
 
         <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
         `
+        }, 800)
+        
     }
     else {
-        activeAnimal.classList.remove("animal-active");
-        showcase.innerHTML = initialShowcaseHTML;
+        main_content.classList.add("fadeOut");
+        setTimeout(() => {
+            main_content.classList.remove("fadeOut");
+            activeAnimal.classList.remove("animal-active");
+            showcase.innerHTML = initialShowcaseHTML;
+        }, 1000)
     }   
 }))
+
+welcomeBtn.addEventListener('click', () => {
+    main_content.classList.add("fadeOut");
+    setTimeout(() => {
+        main_content.classList.remove("fadeOut");
+        showcase.innerHTML = `
+        <div class="choose-container">
+                <h2>Choose your animal</h2>
+                <img src="./icons/animal-care.png" alt="">
+        </div>
+        `
+
+    }, 1000)
+    
+    if (window.innerWidth > 605) {
+        setTimeout(() => {
+            sidebar.classList.add("active");
+            main_content.classList.add("active");
+        }, 1500)
+    }
+    else {
+        delayedButtonsActivation(0);
+
+        setTimeout(() => {
+            delayedButtonsActivation(0);
+        }, 400);
+    } 
+
+});
+
+function delayedButtonsActivation(i) {
+    animalButtons[i].classList.toggle("animal-active");
+    if (i < animalButtons.length) {
+        setTimeout(function () {
+            i++;
+            delayedButtonsActivation(i);
+        }, 90);
+    }
+}
