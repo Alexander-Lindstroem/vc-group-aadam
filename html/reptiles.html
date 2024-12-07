@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylsheet" href="../css/reptile.css">
+    <link rel="stylesheet" href="../css/reptile.css">
     <script src="../scripts/reptiles.js" defer></script>
     <script src="../scripts/sidebar.js" defer></script>
     <title>Reptiles</title>
@@ -42,6 +42,7 @@
             </li>
         </ul>
     </div>
+    
     <section class="main-content">
         <div class="container">
             <div class="sidebar">
@@ -50,35 +51,18 @@
                         <img src="../icons/paw.png" alt="Paw Icon" class="iconpaw" id="btn">
                     </div>
                 </div>
-                <ul>
-                    <li>
-                        <a href="#" class="nav-link" data-name="frill-necked-lizard">
-                            <img src="../icons/Frill-necked-lizard.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
-                            <span class="nav-item" id="frill-necked-lizard">lizard</span>
-                        </a>
-                        <span class="tooltip lizard">lizard</span>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link" data-name="hawksbill-turtle">
-                            <img src="../icons/hawksbill-turtle.png" alt="Hawksbill Turtle Icon" class="icon-side hawksbill-turtle-icon">
-                            <span class="nav-item" id="hawksbill-turtle">---Hawksbill Turtle----</span>
-                        </a>
-                        <span class="tooltip hawsbill" id="hawsbill">---Hawksbill Turtle----</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../icons/monitor-lizard.png" alt="Quokka Icon" class="icon-side Perentie-icon">
-                            <span class="nav-item" id="perentie">---Perentie--- </span>
-                        </a>
-                        <span class="tooltip perentie" id="perentie">---Perentie--- </span>
-                    </li>
+                <ul class="sidebar__list">
+                   
                 </ul>
             </div>
+            <div class="welcome">
+                Welcome to reptiles!             
+            </div>
+                <!-- Information kommer att läggas till här när en reptil väljs -->
+            <div id="info-animal" class="info-animal hide"></div>
         </div>
     </section>
-    <div id="info-container" class="info-container">
-        <!-- Information kommer att läggas till här när en reptil väljs -->
-    </div>
+    
     <footer class="footer">
         <div>
             <h2>Emails</h2>

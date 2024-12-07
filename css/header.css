@@ -67,6 +67,7 @@
         transform-origin: bottom right;
     }
 }
+
 @media (max-width: 803px) {
     .header h1 {
         font-size: 3rem;

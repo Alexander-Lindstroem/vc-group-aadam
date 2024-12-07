@@ -249,5 +249,3 @@ animalButtons.forEach(b => b.addEventListener('click', ()=> {
         showcase.innerHTML = initialShowcaseHTML;
     }   
 }))
-
-
