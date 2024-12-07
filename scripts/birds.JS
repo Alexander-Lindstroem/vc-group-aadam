@@ -1,6 +1,4 @@
-class Bird {
-  constructor(name, lifespan, group, food, description, length, weight, found) {
-
+function Bird (name, lifespan, group, food, description, length, weight, found) {
     this.name = name
     this.lifespan = lifespan
     this.group = group
@@ -10,10 +8,9 @@ class Bird {
     this.weight = weight
     this.found = found
   }
-}
   
   let birds = [
-  new Bird 
+  cassowary = new Bird 
   (
     "Cassowary", 
     "20 years", 
@@ -23,26 +20,23 @@ class Bird {
      "1.7m",
     "44kg", 
     "Queensland"
-  
   ),
   
-  new Bird 
+  kookaburra = new Bird 
   (
     "Kookaburra",
      "20 years",
      "bird",
      "Insects and small animals including snakes, frogs and lizards", 
-      "Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family, with females weighing up to one pound and growing to 43 cm in length. Its beak can reach 10 cm long and is used to snatch a variety of invertebrates and small vertebrates, including the occasional small snake. Since being introduced in western Australia and New Zealand, the kookaburra has angered farmers by preying on their fowl. The laughing kookaburra has dark brown wing plumage and a white head and underside. Dark brown eye stripes run across its face and its upper bill is black. Its reddish-coloured tail is patterned with black bars.",
+     "Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family, with females weighing up to one pound and growing to 43 cm in length. Its beak can reach 10 cm long and is used to snatch a variety of invertebrates and small vertebrates, including the occasional small snake. Since being introduced in western Australia and New Zealand, the kookaburra has angered farmers by preying on their fowl. The laughing kookaburra has dark brown wing plumage and a white head and underside. Dark brown eye stripes run across its face and its upper bill is black. Its reddish-coloured tail is patterned with black bars.",
      "43cm", 
      "300g", 
      "Australia Wide"
-    
-     
   ),
   
-  new Bird 
+  cockatoo = new Bird
   (
-    "Yellow Tailed Black Cockatoo", 
+    "Yellow-Tailed Black Cockatoo", 
     "41 years", 
     "bird",
      "Fruit, seeds and other plant material", 
@@ -50,7 +44,20 @@ class Bird {
      "65 cm",
      "900g",
      "SE Australia"
-    
   )
-  
-  ]
+]
+
+let sidebarHTML = document.querySelector(".sidebar ul");
+
+birds.forEach(bird => {
+  sidebarHTML.innerHTML += `
+          <li>
+              <a href="#" class="animal">
+                  <img src="../icons/${bird.name.toLowerCase()}.png" alt="${bird.name.toLowerCase()} Icon" class="icon-side ${bird.name.toLowerCase()}-icon">
+                  <span class="nav-item">${bird.name}</span>
+              </a>
+              <span class="tooltip">${bird.name}</span>
+          </li>
+  `
+});
+
