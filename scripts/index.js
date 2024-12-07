@@ -273,7 +273,7 @@ welcomeBtn.addEventListener('click', () => {
         setTimeout(() => {
             sidebar.classList.add("active");
             main_content.classList.add("active");
-        }, 1500)
+        }, 1300)
     }
     else {
         delayedButtonsActivation(0);
