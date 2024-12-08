@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/index.css">
 
+    <script src="./scripts/index.js" defer></script>
     <script src="./scripts/sidebar.js" defer></script>
     <title>Home</title>
 </head>
@@ -28,6 +29,7 @@
                 <img src="./icons/page-menu.png" alt="">
             </div>
         </div>
+        <div class="border-line-horizontal"></div>
     </header>
 
     <div class="sidebar">
@@ -36,12 +38,21 @@
                 <img src="./icons/paw.png" alt="paw" class="icon-paw" id="btn">
             </li>
         </ul>
+        <div class="border-line-vertical"></div>
     </div>
+
     <main class="main-content">
         <section class="showcase">
+            <video src="./video/Animal-zoo-video.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="welcome-container">
+                <h2>Welcome to the Green Labyrinth</h2>
+                <p>A plethora of animals to explore and learn about to your heart's content. Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Quidem, porro! Lorem ipsum dolor sit amet.</p>
+                <button class="welcome-button">Dive In</button>
         </section>
     </main>
-    
+
 
     <footer class="footer">
         <div>
@@ -57,7 +68,7 @@
             <p>Copyright &copy; 2024 Australia Zoo</p>
         </div>
     </footer>
-    <script src="./scripts/index.js"></script>
+
 </body>
 
 </html>
