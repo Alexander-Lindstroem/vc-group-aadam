@@ -1,4 +1,8 @@
 /* You can introduce different colors if needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Herr+Von+Muellerhoff&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 :root {
     --background-main-color: rgb(255, 255, 242);
     --background-secondary-color: rgb(0, 37, 38);
