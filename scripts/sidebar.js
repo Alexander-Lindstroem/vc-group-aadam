@@ -17,4 +17,3 @@ btn.addEventListener('click', function () {
         main_content.classList.toggle('active');
     }
 });
-
