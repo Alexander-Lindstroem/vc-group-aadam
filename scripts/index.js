@@ -15,7 +15,7 @@ new Animal(
 
     50,
 
-    "mammal",
+    "Mammals",
 
     "insects such as ants and termites, beetle larvae and worms",
 
@@ -32,7 +32,7 @@ new Animal(
 
     5,
 
-    "mammal",
+    "Mammals",
 
     "A predator, then eat meat from other animals such as wallabies and wombats",
 
@@ -49,7 +49,7 @@ new Animal(
 
     10,
 
-    "mammal",
+    "Mammals",
 
     "Plant eaters, they munch on shrubs and grasses",
 
@@ -66,7 +66,7 @@ new Animal(
 
     20,
 
-    "reptile",
+    "Reptiles",
 
     "Small insects and spiders",
 
@@ -84,7 +84,7 @@ new Animal(
 
     50,
 
-    "reptile",
+    "Reptiles",
 
     "other animals (sponges & jellyfish), sea plants",
 
@@ -101,7 +101,7 @@ new Animal(
 
     20,
 
-    "reptile",
+    "Reptiles",
 
     "Carnivore, they eat animals like kangaroos, rabbits, lizards and birds",
     "The perentie (Varanus giganteus) is the largest monitor lizard or goanna native to Australia. It is one of the largest living lizards on earth, after the Komodo dragon, Asian water monitor, crocodile monitor, and intersecting by size with Nile monitor.[3] Found west of the Great Dividing Range in the arid areas of Australia, it is rarely seen, because of its shyness and the remoteness of much of its range from human habitation. The species is considered to be a least-concern species according to the International Union for Conservation of Nature. Its status in many Aboriginal cultures is evident in the totemic relationships, and part of the Ngiṉṯaka dreaming, as well as bush tucker. It was a favoured food item among desert Aboriginal tribes, and the fat was used for medicinal and ceremonial purposes.",
@@ -116,9 +116,10 @@ new Animal(
 
     20,
 
-    "bird",
+    "Birds",
 
     "Plants matter like fruit, insects and small animals like mice amd lizards",
+    
     "It’s not hard to imagine that cassowaries are descended from dinosaur ancestors. The largest cassowaries can stand as high as six feet and weigh up to 160 pounds.   These large birds cannot fly, but their extremely powerful legs propel them at great speeds. They are strong swimmers and can move quickly on both land and water. Cassowaries are shy and they are usually hard to spot, at least in their natural rain forest habitats. They are not overly aggressive, and attacks are rare. But they can do a lot of damage if they are provoked or angered. Cassowary attacks have occasionally been deadly, including a recent one which occurred in 2019, at a private collection of caged birds in Florida",
 
     "1.7m",
@@ -132,7 +133,7 @@ new Animal(
 
     20,
 
-    "bird",
+    "Birds",
 
     "insects such as ants and termites, beetle larvae and worms",
 
@@ -149,7 +150,7 @@ new Animal(
 
     41,
 
-    "bird",
+    "Birds",
 
     "Fruit, seeds and other plant material",
 
@@ -200,48 +201,43 @@ animalButtons.forEach(btn => btn.addEventListener('click', () => {
         setTimeout(() => {
             main_content.classList.remove("fadeOut");
             showcase.innerHTML = `
-        <div class="title">${selectedAnimal.name}</div>
-        <div class="container">
-            <div class="statistics">
-                <ul>
-                    <li>
-                        <p>lifespan: ${selectedAnimal.lifespan} years</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>group: ${selectedAnimal.group}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>food: ${selectedAnimal.food}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>length: ${selectedAnimal.length}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>weight: ${selectedAnimal.weight}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>found: ${selectedAnimal.habitat}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="description">
-                <p>
-                    ${selectedAnimal.description}
-                </p>
-            </div>
-        </div>
+            <div class="parent-container">
 
-        <div class="pet-house"><img src="./icons/pet-house.png" alt=""></div>
+                <div class="container">
+                    <div class="information-container">
+                        <p>
+                            ${selectedAnimal.description.substring(0, 200)}
+                        </p>
+                    </div>
+    
+                    <div class="name-container">
+                        <img src="./homepage-images/${selectedAnimal.name.toLowerCase()}-preview.png" alt="">
+                        <h2>${selectedAnimal.name}</h2>
+                    </div>
+    
+                    <div class="border-line-horizontal"></div>
+                </div>
+    
+                <div class="container">
+                    <div class="food-container">
+                        <h2>Favorite food:</h2>
+                        <p>${selectedAnimal.food}</p>
+                    </div>
+    
+                    <div class="group-container">
+                        <h2>${selectedAnimal.group} Group</h2>
+                        <a href="./html/${selectedAnimal.group.toLowerCase()}.html">
+                            <button>Learn more</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-line-vertical"></div>
+                <div class="border-line-vertical-reverse"></div>
+
+                <div class="border-line-horizontal"></div>
+                <div class="border-line-horizontal-reverse"></div>
+            </div>
         `
         }, 800)
         
@@ -280,7 +276,7 @@ welcomeBtn.addEventListener('click', () => {
 
         setTimeout(() => {
             delayedButtonsActivation(0);
-        }, 400);
+        }, 300);
     } 
 
 });

@@ -15,17 +15,7 @@
     z-index: 10;
 }
 
-.border-line-vertical {
-    position: absolute;
-    width: 2px;
-    background-color: var(--background-main-color);
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transform: scaleY(0);
-    animation: vertical-lineup 0.8s ease-in-out;
-    animation-fill-mode: forwards;
-}
+
 
 .sidebar ul .animal-button {
     padding-bottom: 4rem;
@@ -150,16 +140,7 @@
 }
 
 
-@keyframes vertical-lineup {
-    0%{
-        transform: scaleY(0);
-        transform-origin: right bottom;
-    }
-    100%{
-        transform: scaleY(1);
-        transform-origin: right bottom;
-    }
-}
+
 
 @media (max-width: 605px) {
     .sidebar {
