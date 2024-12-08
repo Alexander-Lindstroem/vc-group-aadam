@@ -9,7 +9,6 @@ function Bird(name, lifespan, group, food, description, length, weight, found) {
   this.found = found;
 }
 
-
 let birds = [
   new Bird(
       "Cassowary", 
@@ -42,9 +41,7 @@ let birds = [
       "SE Australia"
   )
 ];
-
 let sidebarHTML = document.querySelector(".sidebar ul");
-
 birds.forEach(bird => {
   sidebarHTML.innerHTML += `
       <li>
@@ -56,7 +53,6 @@ birds.forEach(bird => {
       </li>
   `;
 });
-
 function showGroupTypeMessage() {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = `
@@ -65,7 +61,6 @@ function showGroupTypeMessage() {
       </div>
   `;
 }
-
 function showBirdSummary(bird) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = `
@@ -80,7 +75,6 @@ function showBirdSummary(bird) {
       showFullBirdDetails(bird);
   });
 }
-
 function showFullBirdDetails(bird) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = `
@@ -117,7 +111,6 @@ function addBirdClickListeners() {
       });
   });
 }
-
 function initializePage() {
   showGroupTypeMessage();
   addBirdClickListeners();
