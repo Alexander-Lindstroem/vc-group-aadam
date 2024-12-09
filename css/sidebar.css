@@ -12,7 +12,7 @@
     background-color: var(--background-optional-color);
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
-    z-index: 10;
+    z-index: 20;
 }
 
 
