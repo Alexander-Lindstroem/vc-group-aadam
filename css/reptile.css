@@ -3,7 +3,9 @@ ul li a .nav-item.active {
     color: rgb(222, 238, 6) !important; 
     border-radius: 5px !important;
 }
-
+.main-content {
+    min-height: 100vh;
+}
 
 .info-animal{
     background-color: var(--background-main-color);
@@ -20,11 +22,6 @@ ul li a .nav-item.active {
     margin-bottom: 20%;
     margin-left: 20%;
     border-radius: 10px black;
-    
-    
-
-    
-    
     
 }
 
