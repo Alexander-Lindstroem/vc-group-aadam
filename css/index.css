@@ -11,6 +11,7 @@ body {
     flex-grow: 1;
     opacity: 1;
     transition: 0.5s ease;
+    min-height: 100vh;
 }
 
 .main-content.fadeOut {
@@ -27,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: 100vhgi;
+    height: 100%;
     max-width: 100%;
     padding: 2rem;
 }
