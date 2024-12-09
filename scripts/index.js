@@ -173,14 +173,6 @@ let initialShowcaseHTML = `
                 <img src="./icons/animal-care.png" alt="">
         </div>
     `
-
-let initialShowcaseHTML = `
-        <div class="choose-container">
-                <h2>Choose your animal</h2>
-                <img src="./icons/animal-care.png" alt="">
-        </div>
-    `
-
 let sidebarHTML = document.querySelector(".sidebar ul");
 
 animals.forEach(animal => {
