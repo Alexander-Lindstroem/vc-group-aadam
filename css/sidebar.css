@@ -15,7 +15,9 @@
     z-index: 10;
 }
 
-
+.sidebar ul {
+    max-height: 100%;
+}
 
 .sidebar ul .animal-button {
     padding-bottom: 4rem;
@@ -55,7 +57,7 @@
 .sidebar ul li {
     position: relative;
     list-style-type: none;
-    height: 50px;
+    height: 43px;
     width: 100%;
     margin: 0.8rem auto;
     line-height: 50px;
@@ -139,8 +141,13 @@
     display: none;
 }
 
-
-
+@media (width: 1024px) and (width: 600px) {
+    .icon-side {
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+    }
+}
 
 @media (max-width: 605px) {
     .sidebar {
