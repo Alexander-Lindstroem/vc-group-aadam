@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/birds.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <title>Birds</title>
   
     <script src="../scripts/birds.js" defer></script>
     <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+
+    <title>Birds</title>
 </head>
 <body>
-      <header class="header">
+    <header class="header">
         <div class="header-content">
             <div class="logo">
             </div>
@@ -24,37 +26,41 @@
             <h1 class="underline-animation">
                 Australian Zoo
             </h1>
+
             <div class="menu-button">
                 <img src="../icons/page-menu.png" alt="">
             </div>
         </div>
+        <div class="border-line-horizontal"></div>
     </header>
   
-    <div class="menu">
+    <section class="menu">
         <ul>
-            <li>
-                <a href="../index.html"><h2>Home</h2></a>
+            <li class="next-button">
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="next-button">
+                <a href="./mammals.html">Mammals</a>
+            </li>
+            <li class="next-button">
+                <a href="./reptiles.html">Reptiles</a>
+            </li>
+            <li class="next-button">
+                <a href="./birds.html">Birds</a>
             </li>
             <li>
-                <a href="./mammals.html"><h2>Mammals</h2></a>
-            </li>
-            <li>
-                <a href="./reptiles.html"><h2>Reptiles</h2></a>
-            </li>
-            <li>
-                <a href="./birds.html"><h2>Birds</h2></a>
-            </li>
-            <li>
-                <a href="./team.html"><h2>Team</h2></a>
+                <a href="./team.html">About us</a>
             </li>
         </ul>
-    </div>
+    </section>
+    
     <div class="sidebar">
         <ul>
             <li class="animal-button">
                 <img src="../icons/paw.png" alt="paw" class="icon-paw" id="btn">
             </li>
         </ul>
+        <div class="border-line-vertical"></div>
     </div>
 
     <div class="main-content">
