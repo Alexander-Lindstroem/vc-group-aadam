@@ -4,8 +4,8 @@
     color: white;
     padding: 1.5rem 0 0.5rem 0;
     font-size: 0.9rem;
-    width: 100%;
     bottom: 0;
+    margin-left: 80px;
 }
 
 .footer-content {
@@ -52,7 +52,10 @@
     opacity: 0.7;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 605px) {
+    .footer {
+        margin-left: 60px;
+    }
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -66,5 +69,12 @@
     .footer-section:last-child {
         margin-bottom: 0;
     }
+
+    .footer-bottom p {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+
 
