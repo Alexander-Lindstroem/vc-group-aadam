@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/index.css">
+    <title>Home</title>
+  
     <script src="./scripts/index.js" defer></script>
     <script src="./scripts/sidebar.js" defer></script>
-    <title>Home</title>
 </head>
 
 <body>
@@ -29,6 +30,7 @@
                 <img src="./icons/page-menu.png" alt="">
             </div>
         </div>
+        <div class="border-line-horizontal"></div>
     </header>
    
 
@@ -38,7 +40,9 @@
                 <img src="./icons/paw.png" alt="paw" class="icon-paw" id="btn">
             </li>
         </ul>
+        <div class="border-line-vertical"></div>
     </div>
+
     <main class="main-content">
         <div class="menu">
             <ul>
@@ -60,26 +64,33 @@
             </ul>
         </div>
         <section class="showcase">
+            <video src="./video/Animal-zoo-video.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="welcome-container">
+                <h2>Welcome to the Green Labyrinth</h2>
+                <p>A plethora of animals to explore and learn about to your heart's content. Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Quidem, porro! Lorem ipsum dolor sit amet.</p>
+                <button class="welcome-button">Dive In</button>
         </section>
-    </main>
-    
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <a href="mailto:info@australiazoo.com">info@australiazoo.com</a>
-                    <a href="mailto:support@australiazoo.com">support@australiazoo.com</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Location</h3>
-                    <p>1638 Steve Irwin Way</p>
-                    <p>Beerwah, QLD 4519</p>
-                </div>
+    </main>    
+      
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <a href="mailto:info@australiazoo.com">info@australiazoo.com</a>
+                <a href="mailto:support@australiazoo.com">support@australiazoo.com</a>
             </div>
-            <div class="footer-bottom">
-                <p>Made By Team AADAM | Copyright &copy; 2024 Australia Zoo</p>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>1638 Steve Irwin Way</p>
+                <p>Beerwah, QLD 4519</p>
             </div>
-        </footer>
+        </div>
+        <div class="footer-bottom">
+            <p>Made By Team AADAM | Copyright &copy; 2024 Australia Zoo</p>
+        </div>
+    </footer>
 </body>
 
 </html>
