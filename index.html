@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/index.css">
-
+    <title>Home</title>
+  
     <script src="./scripts/index.js" defer></script>
     <script src="./scripts/sidebar.js" defer></script>
-    <title>Home</title>
 </head>
 
 <body>
@@ -31,6 +32,7 @@
         </div>
         <div class="border-line-horizontal"></div>
     </header>
+   
 
     <div class="sidebar">
         <ul>
@@ -42,6 +44,25 @@
     </div>
 
     <main class="main-content">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="./index.html"><h2>Home</h2></a>
+                </li>
+                <li>
+                    <a href="./html/mammals.html"><h2>Mammals</h2></a>
+                </li>
+                <li>
+                    <a href="./html/reptiles.html"><h2>Reptiles</h2></a>
+                </li>
+                <li>
+                    <a href="./html/birds.html"><h2>Birds</h2></a>
+                </li>
+                <li>
+                    <a href="./html/team.html"><h2>Team</h2></a>
+                </li>
+            </ul>
+        </div>
         <section class="showcase">
             <video src="./video/Animal-zoo-video.mp4" muted loop autoplay></video>
             <div class="overlay"></div>
@@ -51,24 +72,25 @@
                     consectetur adipisicing elit. Quidem, porro! Lorem ipsum dolor sit amet.</p>
                 <button class="welcome-button">Dive In</button>
         </section>
-    </main>
-
-
+    </main>    
+      
     <footer class="footer">
-        <div>
-            <h2>Emails</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <a href="mailto:info@australiazoo.com">info@australiazoo.com</a>
+                <a href="mailto:support@australiazoo.com">support@australiazoo.com</a>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>1638 Steve Irwin Way</p>
+                <p>Beerwah, QLD 4519</p>
+            </div>
         </div>
-        <div>
-            <p>Made By Team AADAM</p>
-            <p>Copyright &copy; 2024 Australia Zoo</p>
+        <div class="footer-bottom">
+            <p>Made By Team AADAM | Copyright &copy; 2024 Australia Zoo</p>
         </div>
     </footer>
-
 </body>
 
 </html>
