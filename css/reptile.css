@@ -4,6 +4,15 @@ ul li a .nav-item.active {
     border-radius: 5px !important;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: 80px;
+    height: 100vh;
+}
 
 .info-animal{
     background-color: var(--background-main-color);
@@ -16,16 +25,7 @@ ul li a .nav-item.active {
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 600px;
-    margin-top: 10%;
-    margin-bottom: 20%;
-    margin-left: 20%;
-    border-radius: 10px black;
-    
-    
-
-    
-    
-    
+    border-radius: 10px black;   
 }
 
 .container {
