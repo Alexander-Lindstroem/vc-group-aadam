@@ -20,13 +20,11 @@ ul li a .nav-item.active {
     margin-bottom: 20%;
     margin-left: 20%;
     border-radius: 10px black;
-    
+    }
     
 
     
-    
-    
-}
+
 
 .container {
     flex-direction: row;
