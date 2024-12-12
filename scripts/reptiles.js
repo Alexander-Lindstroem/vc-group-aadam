@@ -61,7 +61,7 @@ const constructSidebarList = () => {
         <span class="tooltip lizard">${animal.name}</span>`
 
         animalNameButton.addEventListener("click", (event) => {
-            let welcomeMessage = document.querySelector(".welcome");
+    let welcomeMessage = document.querySelector(".welcome");
              
     if (animalInfo.classList.contains("hide")) {
         
@@ -70,7 +70,7 @@ const constructSidebarList = () => {
     } else {
        
         animalInfo.classList.add("hide");
-        welcomeMessage.classList.remove("hide");
+        //welcomeMessage.classList.remove("hide");
     }
 
 

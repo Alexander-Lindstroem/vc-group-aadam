@@ -6,7 +6,7 @@ ul li a .nav-item.active {
 
 
 .info-animal{
-    background-color: var(--background-main-color);
+    background-color: palevioletred;
     display: grid;
     flex-direction: column; 
     justify-content: center; 
@@ -16,15 +16,23 @@ ul li a .nav-item.active {
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 600px;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-bottom: 20%;
-    margin-left: 20%;
+    margin-left: 30%;
     border-radius: 10px black;
+    padding
     }
     
-
+.main-content {
+    background-color: palevioletred;
+}
     
-
+.welcome {
+    font-size: 2rem;
+    color: black;
+    margin-left: 40%;
+    margin-top: 25%;
+}
 
 .container {
     flex-direction: row;
@@ -34,3 +42,32 @@ ul li a .nav-item.active {
     display: none;
 }
 
+@media screen and (max-width: 768px) {
+    
+   .info-animal {
+    background-color: palevioletred;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    margin-right: 10%;
+    font-size: 0.7rem;
+    align-items: center;
+   }
+
+   .tooltip {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.tooltip.visible {
+    opacity: 1; 
+}
+
+    
+.welcome {
+    font-size: 1rem;
+    color: black;
+    
+}
+    
+}
