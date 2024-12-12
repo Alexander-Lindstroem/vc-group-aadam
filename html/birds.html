@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/general.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/birds.css">
+    
+    <script src="../scripts/birds.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
     <title>Birds</title>
 </head>
 <body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+            </div>
+
+            <h1 class="underline-animation">Australian Zoo</h1>
+
+            <div class="menu-button">
+                <img src="../icons/page-menu.png" alt="">
+            </div>
+        </div>
+        <div class="border-line-horizontal"></div>
+    </header>
     <div class="menu">
         <ul>
             <li>
@@ -31,48 +49,41 @@
             </li>
         </ul>
     </div>
-</body>
-</html>
-=======
-    <link rel="stylesheet" href="../css/birds.css">
-    <script src="../scripts/sidebar.js" defer></script>
-    <title>Home</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo"></div>
-            <h1>Australia Zoo</h1>
-            <div class="menu-button">
-                <img src="../icons/page-menu.png" alt="">
-            </div>
-        </div>
-    </header>
 
-    <body>
-    
-        <div class="main-content">
-            <h2>Welcome to Australia Zoo</h2>
-            <p>Did you know that some birds can mimic human speech?</p>
-            <p>Want learn more about our birds? Click the sidebar for some of Australia's most iconic Birds!</p>
-            <div class="image-container">
-                <img src="../image/bird-image.jpg" alt="White bird">
+    <div class="sidebar">
+        <ul>
+            <li class="animal-button">
+                <img src="../icons/paw.png" alt="paw" class="icon-paw" id="btn">
+            </li>
+        </ul>
+        <div class="border-line-vertical"></div>
+    </div>
+
+    <div class="main-content">
+        <h2>Welcome to Australia Zoo</h2>
+        <p>Did you know that some birds can mimic human speech?</p>
+        <p>Want learn more about our birds? Click the sidebar for some of Australia's most iconic Birds!</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <a href="mailto:info@australiazoo.com">info@australiazoo.com</a>
+                <a href="mailto:support@australiazoo.com">support@australiazoo.com</a>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>1638 Steve Irwin Way</p>
+                <p>Beerwah, QLD 4519</p>
             </div>
         </div>
-    
-        <footer> 
-            <div>
-                <h2>Contact Us</h2>
-                <p>Email: info@Australiazoo.com</p>
-                <p>Phone: +61 123 456 789</p>
-                <p>Location: Queensland, Australia</p>
-            </div>
-            <div>
-                <p>Made By Team AADAM</p>
-                <p>Copyright &copy; 2024 Australia Zoo</p>
-            </div>
-        </footer>
-    </body>
-    </html>
-    
->>>>>>> feature/reptile-main
+        <div class="footer-bottom">
+            <p>Made By Team AADAM | Copyright &copy; 2024 Australia Zoo</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
