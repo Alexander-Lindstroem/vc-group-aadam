@@ -50,6 +50,7 @@ console.log(reptiles);
 let animalInfo = document.querySelector(".info-animal")
 
 
+
 const constructSidebarList = () => {
     let list = document.querySelector(".sidebar__list");
     reptiles.forEach(animal => {
