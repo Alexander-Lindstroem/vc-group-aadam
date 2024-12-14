@@ -64,15 +64,19 @@ const constructSidebarList = () => {
         animalNameButton.addEventListener("click", (event) => {
     let welcomeMessage = document.querySelector(".welcome");
              
+        welcomeMessage.classList.remove("hide");
+        animalInfo.classList.add("hide");
+
+    animalNameButton.addEventListener("click", () => {
     if (animalInfo.classList.contains("hide")) {
-        
         animalInfo.classList.remove("hide");
         welcomeMessage.classList.add("hide");
     } else {
-       
+        welcomeMessage.classList.remove("hide");
         animalInfo.classList.add("hide");
-        //welcomeMessage.classList.remove("hide");
     }
+});
+
 
 
         animalInfo.innerHTML = `
@@ -94,30 +98,3 @@ const constructSidebarList = () => {
     });
 }
 constructSidebarList()
-
-
-
-/*
-                    <li>
-                        <a href="#" class="nav-link" data-name="frill-necked-lizard">
-                            <img src="../icons/Frill-necked-lizard.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
-                            <span class="nav-item" id="frill-necked-lizard">lizard</span>
-                        </a>
-                        
-                        <span class="tooltip lizard">lizard</span>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link" data-name="hawksbill-turtle">
-                            <img src="../icons/hawksbill-turtle.png" alt="Hawksbill Turtle Icon" class="icon-side hawksbill-turtle-icon">
-                            <span class="nav-item" id="hawksbill-turtle">---Hawksbill Turtle----</span>
-                        </a>
-                        <span class="tooltip hawsbill" id="hawsbill">---Hawksbill Turtle----</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../icons/monitor-lizard.png" alt="Quokka Icon" class="icon-side Perentie-icon">
-                            <span class="nav-item" id="perentie">---Perentie--- </span>
-                        </a>
-                        <span class="tooltip perentie" id="perentie">---Perentie--- </span>
-                    </li>
-*/
