@@ -42,6 +42,13 @@ ul li a .nav-item.active {
     display: none;
 }
 
+#message {
+    margin-top: 20%;
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-bottom: 30%;
+}
+
 @media screen and (max-width: 768px) {
     
    .info-animal {
@@ -67,7 +74,8 @@ ul li a .nav-item.active {
 .welcome {
     font-size: 1rem;
     color: black;
-    
+    display: flex;
+    text-align: center;
 }
     
 }

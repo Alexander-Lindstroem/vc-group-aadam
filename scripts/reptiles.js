@@ -63,15 +63,17 @@ const constructSidebarList = () => {
         animalNameButton.addEventListener("click", (event) => {
             let welcomeMessage = document.querySelector(".welcome");
              
-        if (animalInfo.classList.contains("hide")) {
-        
+    if (animalInfo.classList.contains("hide")) {
         animalInfo.classList.remove("hide");
         welcomeMessage.classList.add("hide");
-    //} else {
+    } else {
        
-        //animalInfo.classList.add("hide");
-        //welcomeMessage.classList.remove("hide");
+        animalInfo.classList.add("hide");
+        welcomeMessage.classList.remove("hide");
     }
+    
+
+    });
 
 
         animalInfo.innerHTML = `
