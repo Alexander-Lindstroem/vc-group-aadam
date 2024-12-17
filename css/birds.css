@@ -6,22 +6,26 @@ body {
 }
 
 .main-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
     text-align: center;
+    min-height: 100vh;
+    margin-left: 80px;
+    margin-top: 80px;
 }
 
 .main-content h2, 
 .main-content p {
     max-width: 600px;
     width: 100%;
+    max-height: 100%;
+    height: 100%;
+    font-weight: bold;
 }
 
 .image-container img {
@@ -32,9 +36,9 @@ body {
 
 @media (max-width: 480px) {
     .main-content {
-        margin: 5px; 
-        padding: 10px; 
-        border-radius: 5px; 
+        margin-left: 60px;
+        padding: 0.5rem; 
+        font-weight: bold;
     }
 
     .main-content h2 {

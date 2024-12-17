@@ -33,12 +33,22 @@ constructSidebarList();
 
 let buttons = Array.from(document.querySelectorAll(".team-sidebar-button"))
 let content = document.querySelector(".team-content")
+const TEAM_PAGE_HTML_DEFAULT = 
+`<div class="team-content__default">
+    <h3>We are team AADAM</h3>
+    <p>Click the sidebar to see information about our members.</p>
+</div>`
+
+content.innerHTML = TEAM_PAGE_HTML_DEFAULT
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         let teamMember = team[buttons.indexOf(button)]
         let teamMemberName = teamMember.firstName.toLowerCase();
-        if (button.classList.contains(teamMemberName)) {
+        if (button.classList.contains("selected")) {
+            content.innerHTML = TEAM_PAGE_HTML_DEFAULT
+            button.classList.remove("selected")
+        } else if (button.classList.contains(teamMemberName)) {
             content.innerHTML = `<div class="team-content__container">
                                     <img src="../image/${teamMemberName}.png" alt="picture of ${teamMemberName}" class="team-content__image">
                                     <div class="team-content__text-container">
