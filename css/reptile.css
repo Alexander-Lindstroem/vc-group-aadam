@@ -4,6 +4,16 @@ ul li a .nav-item.active {
     border-radius: 5px !important;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: 80px;
+    height: 100vh;
+    transition: 0.5s;
+}
 
 .info-animal {
     background-color: rgb(95, 58, 73);
@@ -12,13 +22,10 @@ ul li a .nav-item.active {
     justify-content: center; 
     align-items: center; 
     text-align: center; 
-    padding: 20px; 
+    padding: 40px; 
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 600px;
-    margin-top: 15%;
-    margin-bottom: 20%;
-    margin-left: 30%;
     border-radius: 10px black;
     }
     
@@ -28,10 +35,11 @@ ul li a .nav-item.active {
 }
     
 .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     color: black;
-    margin-left: 40%;
-    margin-top: 25%;
 }
 
 .container {
@@ -53,10 +61,6 @@ ul li a .nav-item.active {
     
    .info-animal {
     background-color:rgb(95, 58, 73);
-    margin-top: 15%;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 10%;
     font-size: 0.7rem;
     align-items: center;
    }
@@ -74,8 +78,14 @@ ul li a .nav-item.active {
 .welcome {
     font-size: 1rem;
     color: black;
-    display: flex;
+    justify-content: center;
     text-align: center;
 }
     
+}
+
+@media (max-width: 605px) {
+    .main-content {
+        margin-left: 60px;
+    }
 }
