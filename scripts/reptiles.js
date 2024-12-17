@@ -45,8 +45,6 @@ perentie  = new Animal(
 ]
 
 
-console.log(reptiles);
-
 let animalInfo = document.querySelector(".info-animal")
 
 
@@ -59,40 +57,56 @@ const constructSidebarList = () => {
             <span class="nav-item" id="frill-necked-lizard">${animal.name}</span>
         </a>
         <span class="tooltip lizard">${animal.name}</span>`
+        list.appendChild(animalNameButton)
 
+    });
+}
+
+constructSidebarList()
+
+
+
+    const animalNameButtons = Array.from(document.querySelectorAll(".nav-link"))
+    let selectedAnimalIndex 
+    animalNameButtons.forEach (animalNameButton => {
         animalNameButton.addEventListener("click", (event) => {
             let welcomeMessage = document.querySelector(".welcome");
-             
-        if (animalInfo.classList.contains("hide")) {
+
+
+            let animalIndex = animalNameButtons.indexOf(animalNameButton)
+            if (selectedAnimalIndex !== animalIndex ){
+            
+                selectedAnimalIndex = animalIndex
+                animalInfo.classList.remove("hide");
+                welcomeMessage.classList.add("hide");
+            } else {
+                selectedAnimalIndex = ""  
+                animalInfo.classList.add("hide");
+                welcomeMessage.classList.remove("hide");
+            }
         
-        animalInfo.classList.remove("hide");
-        welcomeMessage.classList.add("hide");
-    //} else {
-       
-        //animalInfo.classList.add("hide");
-        //welcomeMessage.classList.remove("hide");
-    }
 
 
-        animalInfo.innerHTML = `
-           <h2>${animal.name}</h2>
-            <p>${animal.description}</p>
-            <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
-            <p><strong>Group:</strong> ${animal.group}</p>
-            <p><strong>Food:</strong> ${animal.food}</p>
-            <p><strong>Length:</strong> ${animal.length}</p>
-            <p><strong>Weight:</strong> ${animal.weight}</p>
-            <p><strong>Found:</strong> ${animal.found}</p>
+
+            animalInfo.innerHTML = `
+            <h2>${reptiles[animalIndex].name}</h2>
+            <p>${reptiles[animalIndex].description}</p>
+            <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
+            <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
+            <p><strong>Food:</strong> ${reptiles[animalIndex].food}</p>
+            <p><strong>Length:</strong> ${reptiles[animalIndex].length}</p>
+            <p><strong>Weight:</strong> ${reptiles[animalIndex].weight}</p>
+            <p><strong>Found:</strong> ${reptiles[animalIndex].found}</p>
         `
 
 
               
 
         } )
-        list.appendChild(animalNameButton)
+       
     });
-}
-constructSidebarList()
+
+
 
 
 

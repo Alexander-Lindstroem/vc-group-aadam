@@ -7,7 +7,7 @@ ul li a .nav-item.active {
     min-height: 100vh;
 }
 
-.info-animal{
+.info-animal {
     background-color: rgb(95, 58, 73);
     display: grid;
     flex-direction: column; 
@@ -22,6 +22,18 @@ ul li a .nav-item.active {
     margin-bottom: 20%;
     margin-left: 30%;
     border-radius: 10px black;
+ }
+    
+    
+.main-content {
+    background-color: rgb(95, 58, 73);
+}
+    
+.welcome {
+    font-size: 2rem;
+    color: black;
+    margin-left: 40%;
+    margin-top: 25%;
 }
 
 .container {
@@ -30,4 +42,42 @@ ul li a .nav-item.active {
 
 .hide {
     display: none;
+}
+
+#message {
+    margin-top: 20%;
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-bottom: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    
+   .info-animal {
+    background-color:rgb(95, 58, 73);
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    margin-right: 10%;
+    font-size: 0.7rem;
+    align-items: center;
+   }
+
+   .tooltip {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.tooltip.visible {
+    opacity: 1; 
+}
+
+    
+.welcome {
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    text-align: center;
+}
+    
 }
