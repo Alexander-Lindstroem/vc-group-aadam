@@ -45,8 +45,6 @@ perentie  = new Animal(
 ]
 
 
-console.log(reptiles);
-
 let animalInfo = document.querySelector(".info-animal")
 
 
@@ -63,7 +61,10 @@ const constructSidebarList = () => {
 
     });
 }
+
 constructSidebarList()
+
+
 
     const animalNameButtons = Array.from(document.querySelectorAll(".nav-link"))
     let selectedAnimalIndex 
@@ -77,7 +78,7 @@ constructSidebarList()
                 animalInfo.classList.remove("hide");
                 welcomeMessage.classList.add("hide");
             } else {
-             selectedAnimalIndex = ""  
+                selectedAnimalIndex = ""  
                 animalInfo.classList.add("hide");
                 welcomeMessage.classList.remove("hide");
             }
