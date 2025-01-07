@@ -38,8 +38,6 @@ ul li a .nav-item.active {
     align-items: center;
     font-size: 2rem;
     color: black;
-    margin-left: 40%;
-    margin-top: 25%;
     flex-grow: 1;
 }
 
