@@ -30,9 +30,12 @@ ul li a .nav-item.active {
     flex-grow: 1;
     }
     
-    
 .main-content {
     background-color: rgb(95, 58, 73);
+}
+
+.main-content.active {
+    margin-left: 250px;
 }
     
 .welcome {
