@@ -1,4 +1,4 @@
-function Animal(name, lifespan, group, food, description, length, weight, found, filename) {
+function Animal(name, lifespan, group, food, description, length, weight, found, iconFilename) {
     this.name = name;
     this.lifespan = lifespan;
     this.group = group;
@@ -7,7 +7,7 @@ function Animal(name, lifespan, group, food, description, length, weight, found,
     this.length = length;
     this.weight = weight;
     this.found = found;
-    this.filename = filename;
+    this.iconFilename = iconFilename;
 }
 
 let reptiles = [
@@ -57,7 +57,7 @@ const constructSidebarList = () => {
     reptiles.forEach(animal => {
         let animalNameButton = document.createElement("li");
         animalNameButton.innerHTML =  `<a href="#" class="nav-link" data-name="${animal.name.toLowerCase()}">
-            <img src="../icons/${animal.filename}.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
+            <img src="../icons/${animal.iconFilename}.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
             <span class="nav-item" id="frill-necked-lizard">${animal.name}</span>
         </a>
         <span class="tooltip lizard">${animal.name}</span>`
