@@ -20,7 +20,7 @@ frillNeckedLizard = new Animal(
     "90cm", 
     "1 kg", 
     "Northern Australia",
-    "frill-necked-lizard"
+    "frill-necked-lizard.png"
 ),
 
 hawksbillTurtle = new Animal(
@@ -32,7 +32,7 @@ hawksbillTurtle = new Animal(
     "80cm (carapace)", 
     "50kg",
     "Tropical coasts of Queensland, Northern Territory and Western Australia.",
-    "hawksbill-turtle"
+    "hawksbill-turtle.png"
 ),
 
 perentie  = new Animal(
@@ -44,7 +44,7 @@ perentie  = new Animal(
     "2.5 m", 
     "20kg", 
     "Deserts",
-    "perentie"
+    "perentie.png"
 ),
 ]
 
@@ -57,7 +57,7 @@ const constructSidebarList = () => {
     reptiles.forEach(animal => {
         let animalNameButton = document.createElement("li");
         animalNameButton.innerHTML =  `<a href="#" class="nav-link" data-name="${animal.name.toLowerCase()}">
-            <img src="../icons/${animal.iconFilename}.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
+            <img src="../icons/${animal.iconFilename}" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
             <span class="nav-item" id="frill-necked-lizard">${animal.name}</span>
         </a>
         <span class="tooltip lizard">${animal.name}</span>`
