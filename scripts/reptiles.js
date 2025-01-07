@@ -1,4 +1,4 @@
-function Animal(name, lifespan, group, food, description, length, weight, found, iconFilename) {
+function Animal(name, lifespan, group, food, description, length, weight, found, iconFilename, imageFilename) {
     this.name = name;
     this.lifespan = lifespan;
     this.group = group;
@@ -8,6 +8,7 @@ function Animal(name, lifespan, group, food, description, length, weight, found,
     this.weight = weight;
     this.found = found;
     this.iconFilename = iconFilename;
+    this.imageFilename = imageFilename;
 }
 
 let reptiles = [
@@ -20,7 +21,8 @@ frillNeckedLizard = new Animal(
     "90cm", 
     "1 kg", 
     "Northern Australia",
-    "frill-necked-lizard.png"
+    "frill-necked-lizard.png",
+    "frill-necked lizard-preview.png"
 ),
 
 hawksbillTurtle = new Animal(
@@ -32,7 +34,8 @@ hawksbillTurtle = new Animal(
     "80cm (carapace)", 
     "50kg",
     "Tropical coasts of Queensland, Northern Territory and Western Australia.",
-    "hawksbill-turtle.png"
+    "hawksbill-turtle.png",
+    "hawksbill turtle-preview.png"
 ),
 
 perentie  = new Animal(
@@ -44,94 +47,76 @@ perentie  = new Animal(
     "2.5 m", 
     "20kg", 
     "Deserts",
-    "perentie.png"
+    "perentie.png",
+    "perentie-preview.png"
 ),
 ]
 
-
 let animalInfo = document.querySelector(".info-animal")
-
 
 const constructSidebarList = () => {
     let list = document.querySelector(".sidebar__list");
     reptiles.forEach(animal => {
         let animalNameButton = document.createElement("li");
         animalNameButton.innerHTML =  `<a href="#" class="nav-link" data-name="${animal.name.toLowerCase()}">
-            <img src="../icons/${animal.iconFilename}" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
+            <img src="../icons/${animal.iconFilename}" alt="Icon" class="icon-side">
             <span class="nav-item" id="frill-necked-lizard">${animal.name}</span>
         </a>
         <span class="tooltip lizard">${animal.name}</span>`
         list.appendChild(animalNameButton)
-
     });
 }
 
 constructSidebarList()
 
-
-
-    const animalNameButtons = Array.from(document.querySelectorAll(".nav-link"))
-    let selectedAnimalIndex 
-    animalNameButtons.forEach (animalNameButton => {
-        animalNameButton.addEventListener("click", (event) => {
-            let welcomeMessage = document.querySelector(".welcome");
-            let animalIndex = animalNameButtons.indexOf(animalNameButton)
-            if (selectedAnimalIndex !== animalIndex ){
-            
-                selectedAnimalIndex = animalIndex
-                animalInfo.classList.remove("hide");
-                welcomeMessage.classList.add("hide");
-            } else {
-                selectedAnimalIndex = ""  
-                animalInfo.classList.add("hide");
-                welcomeMessage.classList.remove("hide");
-            }
+const animalNameButtons = Array.from(document.querySelectorAll(".nav-link"))
+let selectedAnimalIndex 
+animalNameButtons.forEach (animalNameButton => {
+    animalNameButton.addEventListener("click", (event) => {
+        let welcomeMessage = document.querySelector(".welcome");
+        let animalIndex = animalNameButtons.indexOf(animalNameButton)
+        if (selectedAnimalIndex !== animalIndex ){
         
-
-
-        animalInfo.innerHTML = `
-           <h2>${reptiles[animalIndex].name}</h2>
-            <p>${reptiles[animalIndex].description}</p>
-            <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
-            <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
-            <p><strong>Food:</strong> ${reptiles[animalIndex].food}</p>
-            <p><strong>Length:</strong> ${reptiles[animalIndex].length}</p>
-            <p><strong>Weight:</strong> ${reptiles[animalIndex].weight}</p>
-            <p><strong>Found:</strong> ${reptiles[animalIndex].found}</p>
-        `
-
-
-              
-
-        } )
-       
-    });
-
-
+            selectedAnimalIndex = animalIndex
+            animalInfo.classList.remove("hide");
+            welcomeMessage.classList.add("hide");
+        } else {
+            selectedAnimalIndex = ""  
+            animalInfo.classList.add("hide");
+            welcomeMessage.classList.remove("hide");
+        }
+        animalInfo.innerHTML = 
+            `<div class="reptile-summary">
+             <h2>${reptiles[animalIndex].name}</h2>
+             <img src="../homepage-images/${reptiles[animalIndex].imageFilename}" class="reptile-image">
+             <p>${reptiles[animalIndex].description.split('.')[0]}.</p>
+             <button class="read-more">Read More</button>
+             </div>`
+        
+        document.querySelector('.read-more').addEventListener('click', () => {
+            animalInfo.innerHTML = 
+                `<h2>${reptiles[animalIndex].name}</h2>
+                 <img src="../homepage-images/${reptiles[animalIndex].imageFilename}" class="reptile-image">
+                 <p>${reptiles[animalIndex].description}</p>
+                 <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
+                 <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
+                 <p><strong>Food:</strong> ${reptiles[animalIndex].food}</p>
+                 <p><strong>Length:</strong> ${reptiles[animalIndex].length}</p>
+                 <p><strong>Weight:</strong> ${reptiles[animalIndex].weight}</p>
+                 <p><strong>Found:</strong> ${reptiles[animalIndex].found}</p>`
+        });
+    })
+});
 
 
 
 /*
-                    <li>
-                        <a href="#" class="nav-link" data-name="frill-necked-lizard">
-                            <img src="../icons/Frill-necked-lizard.png" alt="Frill-necked Lizard Icon" class="icon-side frill-necked-lizard-icon">
-                            <span class="nav-item" id="frill-necked-lizard">lizard</span>
-                        </a>
-                        
-                        <span class="tooltip lizard">lizard</span>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link" data-name="hawksbill-turtle">
-                            <img src="../icons/hawksbill-turtle.png" alt="Hawksbill Turtle Icon" class="icon-side hawksbill-turtle-icon">
-                            <span class="nav-item" id="hawksbill-turtle">---Hawksbill Turtle----</span>
-                        </a>
-                        <span class="tooltip hawsbill" id="hawsbill">---Hawksbill Turtle----</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../icons/monitor-lizard.png" alt="Quokka Icon" class="icon-side Perentie-icon">
-                            <span class="nav-item" id="perentie">---Perentie--- </span>
-                        </a>
-                        <span class="tooltip perentie" id="perentie">---Perentie--- </span>
-                    </li>
+    `<h2>${reptiles[animalIndex].name}</h2>
+    <p>${reptiles[animalIndex].description}</p>
+    <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
+    <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
+    <p><strong>Food:</strong> ${reptiles[animalIndex].food}</p>
+    <p><strong>Length:</strong> ${reptiles[animalIndex].length}</p>
+    <p><strong>Weight:</strong> ${reptiles[animalIndex].weight}</p>
+    <p><strong>Found:</strong> ${reptiles[animalIndex].found}</p>`
 */
