@@ -26,8 +26,14 @@ ul li a .nav-item.active {
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 600px;
+<<<<<<< HEAD
+=======
+    margin-top: 15%;
+    margin-bottom: 20%;
+    margin-left: 30%;
+>>>>>>> 12c9e6a41fff6c556fdeb29ccfa8b8fbf6b2b7c0
     border-radius: 10px black;
-    }
+ }
     
     
 .main-content {
@@ -40,6 +46,11 @@ ul li a .nav-item.active {
     align-items: center;
     font-size: 2rem;
     color: black;
+<<<<<<< HEAD
+=======
+    margin-left: 40%;
+    margin-top: 25%;
+>>>>>>> 12c9e6a41fff6c556fdeb29ccfa8b8fbf6b2b7c0
 }
 
 .container {

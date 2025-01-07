@@ -71,6 +71,8 @@ constructSidebarList()
     animalNameButtons.forEach (animalNameButton => {
         animalNameButton.addEventListener("click", (event) => {
             let welcomeMessage = document.querySelector(".welcome");
+
+
             let animalIndex = animalNameButtons.indexOf(animalNameButton)
             if (selectedAnimalIndex !== animalIndex ){
             
@@ -85,8 +87,9 @@ constructSidebarList()
         
 
 
-        animalInfo.innerHTML = `
-           <h2>${reptiles[animalIndex].name}</h2>
+
+            animalInfo.innerHTML = `
+            <h2>${reptiles[animalIndex].name}</h2>
             <p>${reptiles[animalIndex].description}</p>
             <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
             <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
