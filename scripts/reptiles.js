@@ -107,16 +107,3 @@ animalNameButtons.forEach (animalNameButton => {
         });
     })
 });
-
-
-
-/*
-    `<h2>${reptiles[animalIndex].name}</h2>
-    <p>${reptiles[animalIndex].description}</p>
-    <p><strong>Lifespan:</strong> ${reptiles[animalIndex].lifespan}</p>
-    <p><strong>Group:</strong> ${reptiles[animalIndex].group}</p>
-    <p><strong>Food:</strong> ${reptiles[animalIndex].food}</p>
-    <p><strong>Length:</strong> ${reptiles[animalIndex].length}</p>
-    <p><strong>Weight:</strong> ${reptiles[animalIndex].weight}</p>
-    <p><strong>Found:</strong> ${reptiles[animalIndex].found}</p>`
-*/
