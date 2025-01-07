@@ -11,13 +11,13 @@ ul li a .nav-item.active {
     align-items: center;
     margin-left: 80px;
     margin-top: 80px;
-    height: 100vh;
     transition: 0.5s;
+    min-height: 100vh;
 }
 
 .info-animal {
     background-color: rgb(95, 58, 73);
-    display: grid;
+    display: flex;
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
@@ -30,8 +30,8 @@ ul li a .nav-item.active {
     margin-bottom: 20%;
     margin-left: 30%;
     border-radius: 10px black;
- }
-    
+    flex-grow: 1;
+    }
     
 .main-content {
     background-color: rgb(95, 58, 73);
@@ -45,6 +45,7 @@ ul li a .nav-item.active {
     color: black;
     margin-left: 40%;
     margin-top: 25%;
+    flex-grow: 1;
 }
 
 .container {
@@ -53,6 +54,13 @@ ul li a .nav-item.active {
 
 .hide {
     display: none;
+}
+
+.reptile-image {
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+    height: auto;
 }
 
 #message {
