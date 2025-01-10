@@ -1,4 +1,4 @@
-function Animal(name, lifespan, group, food, description, length, weight, found, iconFilename) {
+function Animal(name, lifespan, group, food, description, length, weight, found, iconFilename, imageFilename) {
     this.name = name;
     this.lifespan = lifespan;
     this.group = group;
@@ -8,6 +8,7 @@ function Animal(name, lifespan, group, food, description, length, weight, found,
     this.weight = weight;
     this.found = found;
     this.iconFilename = iconFilename;
+    this.imageFilename = imageFilename;
 }
 
 let mammals = [
@@ -20,7 +21,8 @@ let mammals = [
         76,
         10,
         "Throughout Australia",
-        "echidna.png"
+        "echidna.png",
+        "echidna-preview.png"
     ),
 
     new Animal(
@@ -32,7 +34,8 @@ let mammals = [
         70,
         10,
         "Tasmania",
-        "tasmanian-devil.png"
+        "tasmanian-devil.png",
+        "tasmanian devil-preview.png"
     ),
 
     new Animal(
@@ -44,7 +47,8 @@ let mammals = [
         50,
         3,
         "Only found on Rottnest Island and a few places on mainland Western Australia",
-        "quokka.png"
+        "quokka.png",
+        "quokka-preview.png"
     )
 ];
 
@@ -86,49 +90,27 @@ animalButtons.forEach(button => button.addEventListener('click', ()=> {
         let selectedAnimal = mammals.find(a => a.name === button.querySelector(".nav-item").innerHTML);
 
         showcase.innerHTML = `
-        <div class="title">${selectedAnimal.name}</div>
-        <div class="container">
-            <div class="statistics">
-                <ul>
-                    <li>
-                        <p>lifespan: ${selectedAnimal.lifespan} years</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>group: ${selectedAnimal.group}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>food: ${selectedAnimal.food}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>length: ${selectedAnimal.length}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>weight: ${selectedAnimal.weight}</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <p>found: ${selectedAnimal.found}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="description">
-                <p>
-                    ${selectedAnimal.description}
-                </p>
-            </div>
-        </div>
-
-        <div class="pet-house"><img src="../icons/pet-house.png" alt=""></div>
-        `
+            <div class="showcase">
+                <h3>${selectedAnimal.name}</h3>
+                <img alt=${selectedAnimal.name} src=../homepage-images/${selectedAnimal.imageFilename} class="mammal-image">
+                <p>${selectedAnimal.description.split('.')[0]}.</p>
+                <button class="read-more">Read More</button>
+            </div>`
+        
+        document.querySelector('.read-more').addEventListener('click', () => {
+            showcase.innerHTML = `
+                <div class="showcase">
+                    <h3>${selectedAnimal.name}</h3>
+                    <img alt=${selectedAnimal.name} src=../homepage-images/${selectedAnimal.imageFilename} class="mammal-image">
+                    <p>${selectedAnimal.description}</p>
+                    <div><strong>Lifespan:</strong> ${selectedAnimal.lifespan}</div>
+                    <div><strong>Group:</strong> ${selectedAnimal.group}</div>
+                    <div><strong>Food:</strong> ${selectedAnimal.food}</div>
+                    <div><strong>Length:</strong> ${selectedAnimal.length}</div>
+                    <div><strong>Weight:</strong> ${selectedAnimal.weight}</div>
+                    <div><strong>Found In:</strong> ${selectedAnimal.found}</div>
+                </div>`
+        })
     }
     else {
         activeAnimal.classList.remove("animal-active");

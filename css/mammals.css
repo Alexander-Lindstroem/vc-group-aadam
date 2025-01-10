@@ -11,6 +11,7 @@ body {
     gap: 5rem;
     transition: 0.5s ease;
     flex-grow: 1;
+    min-height: 100vh;
 }
 
 .main-content.active {
@@ -27,6 +28,13 @@ body {
     max-width: 100%;
     padding: 3rem;
 
+}
+
+.mammal-image {
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+    height: auto;
 }
 
 .title {
