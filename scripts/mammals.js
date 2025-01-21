@@ -35,7 +35,7 @@ let mammals = [
         10,
         "Tasmania",
         "tasmanian-devil.png",
-        "tasmanian devil-preview.png"
+        "tasmanian-devil-preview.png"
     ),
 
     new Animal(
